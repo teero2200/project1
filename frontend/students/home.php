@@ -26,7 +26,7 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
     <!-- Sidebar -->
-    <?php include('../assets/Components/students/sidebar.php') ?>
+    <?php include('../assets/Components/sidebar.php') ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->

@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>สาขาวิชา</title>
+    <title>เปลี่ยนรหัสผ่าน</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -26,7 +26,7 @@
     <!-- Page Wrapper -->
     <div id="wrapper">
         <!-- Sidebar -->
-        <?php include('../assets/Components/admins/sidebar.php') ?>
+        <?php include('../assets/Components/sidebar.php') ?>
         <!-- End of Sidebar -->
 
         <!-- Content Wrapper -->
@@ -39,150 +39,72 @@
                 <div class="container-fluid mt-5">
                     <!-- Page Heading -->
                     <div class="text-center mb-5">
-                        <h3 class="text-dark">สาขาวิชา</h3>
+                        <h3 class="text-dark">เปลี่ยนรหัสผ่าน</h3>
                     </div>
-
-                    <!-- Page Heading -->
-                    <button type="button" class="btn btn-primary mb-3">
-                       เพิ่มข้อมูลสาขาวิชา
-                    </button>
-
-                    <!-- DataTales Example -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th width="14%">ชื่อข่าว</th>
-                                            <th>รายละเอียด</th>
-                                            <th width="20%">Action</th>
-
-                                    </thead>
-
-                                    <tbody>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                        <tr>
-                                            <td>ข่าวสั้น</td>
-                                            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos reiciendis, reprehenderit consequuntur illum velit officiis omnis pariatur? Consequatur deserunt doloremque fuga fugit reprehenderit voluptates error ducimus veritatis dolores, quidem, assumenda, doloribus fugiat debitis illo beatae illum cumque iure sit. Ex.</td>
-                                            <td><button>แก้ไข</button><button>ลบ</button></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                    <div class="container mt-5">
+                        <form action="<?php echo  '/../project/backend/check_login_admin.php' ?>" method="post">
+                            <div class="row mb-3">
+                                <label for="inputId" class="col-sm-2 col-form-label">รหัสปัจจุบัน</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
+                                </div>
                             </div>
-                        </div>
+                            <div class="row mb-3">
+                                <label for="inputId" class="col-sm-2 col-form-label">รหัสใหม่</label>
+                                <div class="col-sm-10">
+                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <label for="inputPassword3" class="col-sm-2 col-form-label">ยืนยันรหัสใหม่</label>
+                                <div class="col-sm-10">
+                                    <input type="password" class="form-control" name="AM_PASSWORD" id="inputPassword3">
+                                </div>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary ">บันทึก</button>
+                                <button type="submit" class="btn btn-secondary ">ยกเลิก</button>
+                            </div>
+
+                        </form>
                     </div>
-
-                    <!-- /.container-fluid -->
                 </div>
-                <!-- End of Main Content -->
 
-                <!-- Footer -->
-                <?php include('../assets/Components/footer.php') ?>
-                <!-- End of Footer -->
+                <!-- /.container-fluid -->
             </div>
-            <!-- End of Content Wrapper -->
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <?php include('../assets/Components/footer.php') ?>
+            <!-- End of Footer -->
         </div>
-        <!-- End of Page Wrapper -->
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
 
-        <!-- Scroll to Top Button-->
-        <a class="scroll-to-top rounded" href="#page-top">
-            <i class="fas fa-angle-up"></i>
-        </a>
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
 
 
 
-        <!-- Bootstrap core JavaScript-->
-        <script src="../assets/vendor/jquery/jquery.min.js"></script>
-        <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-        <!-- Core plugin JavaScript-->
-        <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
-        <!-- Custom scripts for all pages-->
-        <script src="../assets/js/sb-admin-2.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="../assets/js/sb-admin-2.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="../assets/vendor/chart.js/Chart.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="../assets/vendor/chart.js/Chart.min.js"></script>
 
-        <!-- Page level plugins -->
-        <script src="../assets/vendor/datatables/jquery.dataTables.min.js"></script>
-        <script src="../assets/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-        <!-- Page level custom scripts -->
-        <script src="../assets/js/demo/datatables-demo.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="../assets/js/demo/chart-area-demo.js"></script>
+    <script src="../assets/js/demo/chart-pie-demo.js"></script>
 </body>
 
 </html>
