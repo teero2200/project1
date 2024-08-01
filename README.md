@@ -1,4 +1,9 @@
 วิธีเข้าโปรแกรม
+
+
+
+
+
 1.พิมพ์ localhost/project1/frontend/index.php
 
 
