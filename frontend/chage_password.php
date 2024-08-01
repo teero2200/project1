@@ -48,7 +48,7 @@
                             <div class="row mb-3">
                                 <label for="inputId" class="col-sm-2 col-form-label">รหัสปัจจุบัน</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="old_password" id="inputId">
+                                    <input type="password" class="form-control" name="old_password" id="inputId">
                                 </div>
                             </div>
                             <div class="row mb-3">
@@ -65,7 +65,7 @@
                             </div>
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary ">บันทึก</button>
-                                <button type="submit" class="btn btn-secondary ">ยกเลิก</button>
+                                <button type="reset" class="btn btn-secondary ">ยกเลิก</button>
                             </div>
 
                         </form>

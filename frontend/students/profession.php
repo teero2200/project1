@@ -44,9 +44,22 @@
                     <div class="container">
                         <form action="">
                             <div class="row">
-                                <div class="row mb-3">
-                                    <label for="exampleInputEmail1" class="col-sm-2 col-form-label">รหัสประจำตัว</label>
-                                    <input type="text" class="form-control" name="ST_ID" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                      
+
+                                <div class="from-group row">
+                                    <div class="col-sm-2 ">
+                                        <label for="exampleInputEmail1" class="col-sm-2 col-form-label">ที่อยู่</label>
+                                        <input type="text" class="form-control" name="ST_ID" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="col-sm-2 ">
+                                        <label for="exampleInputEmail1" class="col-sm-2 col-form-label">เลขที่</label>
+                                        <input type="text" class="form-control" name="ST_ID" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                    <div class="col-sm-2 ">
+                                        <label for="exampleInputEmail1" class="col-sm-2 col-form-label">เลขไปรสณี</label>
+                                        <input type="text" class="form-control" name="ST_ID" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
                                 </div>
 
                                 <div class="col mb-3">
