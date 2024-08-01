@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>เปลี่ยนรหัสผ่าน</title>
+    <title>หลักสูตรการฝึกงาน</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -39,34 +39,14 @@
                 <div class="container-fluid mt-5">
                     <!-- Page Heading -->
                     <div class="text-center mb-5">
-                        <h3 class="text-dark">เปลี่ยนรหัสผ่าน</h3>
+                        <p class="text-dark">หลักสูตรการฝึกงาน</p>
                     </div>
-                    <div class="container mt-5">
-                        <form action="<?php echo  '/../project/backend/check_login_admin.php' ?>" method="post">
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสปัจจุบัน</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">ยืนยันรหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="AM_PASSWORD" id="inputPassword3">
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary ">บันทึก</button>
-                                <button type="submit" class="btn btn-secondary ">ยกเลิก</button>
-                            </div>
 
-                        </form>
+                    <div class="container mt-5">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button">แบบคำร้องขอฝึกประสบการณ์วิชาชีพ</button>
+                            <button class="btn btn-primary" type="button">แบบคำร้องขอฝึกประสบการณ์ภาคสนาม</button>
+                        </div>
                     </div>
                 </div>
 

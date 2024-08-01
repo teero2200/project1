@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>เปลี่ยนรหัสผ่าน</title>
+    <title>ข้อมูลสาขา</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -39,35 +39,46 @@
                 <div class="container-fluid mt-5">
                     <!-- Page Heading -->
                     <div class="text-center mb-5">
-                        <h3 class="text-dark">เปลี่ยนรหัสผ่าน</h3>
+                        <p class="text-dark">ข้อมูลสาขา</ย>
                     </div>
-                    <div class="container mt-5">
-                        <form action="<?php echo  '/../project/backend/check_login_admin.php' ?>" method="post">
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสปัจจุบัน</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">ยืนยันรหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="AM_PASSWORD" id="inputPassword3">
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary ">บันทึก</button>
-                                <button type="submit" class="btn btn-secondary ">ยกเลิก</button>
-                            </div>
+                    <form action="" method="post">
+                        <div class="row g-3 align-items-center justify-content-between">
 
-                        </form>
-                    </div>
+                            <div class="col-auto">
+                                <label for="inputmajor" class="col-form-label">รหัสสาขา</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="inputmajor" class="form-control">
+                            </div>
+                            <div class="col-auto">
+                                <label for="inputmajor" class="col-form-label">ชื่อสาขาของคณะวิทยาการจัดการ</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="text" id="inputmajor" class="form-control">
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-end flex-column mb-auto " style="height: 200px;">
+                            <div class="p-2">01 วิชาเอกการจัดการทั่วไป</div>
+                            <div class="p-2">02 วิชาเอกการตลาด</div>
+                            <div class="p-2">03 วิชาเอกบริหารทรัพยากรณ์</div>
+                        </div>
+
+                        <div class="d-flex mb-3">
+                            <div class="me-auto p-2">
+                            </div>
+                            <div class="p-2"><a href=""><button type="button" class="btn btn-warning">
+                                        บันทึก
+                                    </button></a></div>
+                            <div class="p-2"><a href=""><button type="button" class="btn btn-success">
+                                        แก้ไข
+                                    </button></a></div>
+                            <div class="p-2"><a href=""><button type="button" class="btn btn-danger">
+                                        ลบ
+                                    </button></a></div>
+                        </div>
+
+                    </form>
                 </div>
 
                 <!-- /.container-fluid -->

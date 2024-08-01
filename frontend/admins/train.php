@@ -39,34 +39,14 @@
                 <div class="container-fluid mt-5">
                     <!-- Page Heading -->
                     <div class="text-center mb-5">
-                        <h3 class="text-dark">เปลี่ยนรหัสผ่าน</h3>
+                        <p class="text-dark">หลักสูตรการฝึกงาน</p>
                     </div>
-                    <div class="container mt-5">
-                        <form action="<?php echo  '/../project/backend/check_login_admin.php' ?>" method="post">
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสปัจจุบัน</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">ยืนยันรหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="AM_PASSWORD" id="inputPassword3">
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary ">บันทึก</button>
-                                <button type="submit" class="btn btn-secondary ">ยกเลิก</button>
-                            </div>
 
-                        </form>
+                    <div class="container mt-5">
+                        <div class="d-grid gap-2">
+                           <a href="profession.php" class="btn btn-primary" type="button">แบบคำร้องขอฝึกประสบการณ์วิชาชีพ</a>
+                        <a href="field.php" class="btn btn-primary" type="button">แบบคำร้องขอฝึกประสบการณ์ภาคสนาม</a>
+                        </div>
                     </div>
                 </div>
 
