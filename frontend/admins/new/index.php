@@ -40,7 +40,7 @@
         <!-- Begin Page Content -->
         <div class="container-fluid mt-5">
           <!-- Page Heading -->
-          <div class="text-center">
+          <div class="text-center mb-3">
 
             <h3 class="text-dark">หัวข้อข่าวสาร</h3>
 
@@ -75,7 +75,6 @@
                 <?php } ?>
               <?php
               } else {
-                echo "0 results";
               }
 
               $objCon->close();

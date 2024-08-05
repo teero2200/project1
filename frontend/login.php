@@ -41,24 +41,25 @@
                     <div class="text-center mb-5">
                         <h3 class="text-dark">เข้าสู่ระบบ</h3>
                     </div>
-                    <div class="container mt-5">
+                    <div class="container  text-center mt-5">
+
+
                         <form action="/../project1/backend/login.php" method="post">
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสประจำตัว</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="ID_IDEN" id="inputId">
-                                </div>
+                            <div class="mb-3 ">
+                                <label for="formGroupExampleInput" class="form-label me-3">รหัสประจำตัว</label>
+                                <input type="text" class="col-md-2 " name="ID_IDEN" id="formGroupExampleInput" maxlength="13" placeholder="163xxxxxx">
                             </div>
-                            <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">รหัสผ่าน</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="password" id="inputPassword3">
-                                </div>
+                            <div class="mb-3">
+                                <label for="formGroupExampleInput2" class="form-label me-3">รหัสผ่าน</label>
+                                <input type="password" class="col-md-2 " name="password" id="formGroupExampleInput2" placeholder="xxxxxx">
                             </div>
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary ">เข้าสู่ระบบ</button>
                             </div>
                         </form>
+
+
                     </div>
                 </div>
 
