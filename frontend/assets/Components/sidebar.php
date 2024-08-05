@@ -135,7 +135,7 @@ session_start();
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลส่วนตัวของนักศึกษา</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="/project1/frontend/login.php">
+                <a class="nav-link text-dark" href="/project1/frontend/students/select.php">
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เลือกหลักสูตร</span></a>
             </li>
             <li class="nav-item">
