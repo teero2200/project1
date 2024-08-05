@@ -39,63 +39,69 @@
                 <div class="container-fluid mt-5">
                     <!-- Page Heading -->
                     <div class="text-center mb-5">
-                        <h3 class="text-dark">คำร้องขอฝึกประสบการณ์วิชาชีพ</h3>
+                        <p class="text-dark">คำร้องขอฝึกประสบการณ์วิชาชีพ</p>
                     </div>
-                    <div class="container">
-                        <form action="">
-                            <div class="row">
 
-                      
+                    <div class="container mt-5">
 
-                                <div class="from-group row">
-                                    <div class="col-sm-2 ">
-                                        <label for="exampleInputEmail1" class="col-sm-2 col-form-label">ที่อยู่</label>
-                                        <input type="text" class="form-control" name="ST_ID" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-sm-2 ">
-                                        <label for="exampleInputEmail1" class="col-sm-2 col-form-label">เลขที่</label>
-                                        <input type="text" class="form-control" name="ST_ID" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-sm-2 ">
-                                        <label for="exampleInputEmail1" class="col-sm-2 col-form-label">เลขไปรสณี</label>
-                                        <input type="text" class="form-control" name="ST_ID" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
+
+
+                        <form class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputEmail1" class="form-label">ชื่อหน่วยงาน/สถานประกอบการ</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">ที่ตั้ง/หมู่/ตำบล/อำเภอ/จังหวัด/รหัสไปรษณีย์</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">โทรศัพท์</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">โทรสาร</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">อีเมล</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">เรียนตำแหน่งหัวหน้าหน่วยงาน/สถานประกอบการ</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">แผนกงานที่ปฎิบัติ(กอง/ฝ่าย/แผนก ฯลฯ)</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="col-md-12 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">ลักษณะงานที่ปฎิบัติ(ถ้ามี)</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+                            <div class="d-flex mb-3">
+                                <div class="me-auto p-2">
                                 </div>
-
-                                <div class="col mb-3">
-                                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <span class="col-text" id="basic-addon2">@example.com</span>
-                                </div>
-
-                                <div class="col mb-3">
-                                    <label for="basic-url" class="form-label">Your vanity URL</label>
-                                    <div class="col">
-                                        <span class="col-text" id="basic-addon3">https://example.com/users/</span>
-                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                                    </div>
-                                    <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
-                                </div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-warning">
+                                            บันทึก
+                                        </button></a></div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-success">
+                                            แก้ไข
+                                        </button></a></div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-danger">
+                                            ลบ
+                                        </button></a></div>
                             </div>
-                            <div class="col mb-3">
-                                <span class="col-text">$</span>
-                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                <span class="col-text">.00</span>
-                            </div>
-
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-                                <span class="col-text">@</span>
-                                <input type="text" class="form-control" placeholder="Server" aria-label="Server">
-                            </div>
-
-                            <div class="col">
-                                <span class="input-group-text">With textarea</span>
-                                <textarea class="form-control" aria-label="With textarea"></textarea>
-                            </div>
-                            <button type="submit">บันทึก</button>
                         </form>
                     </div>
+
+
                 </div>
+
+
+
                 <!-- /.container-fluid -->
             </div>
             <!-- End of Main Content -->

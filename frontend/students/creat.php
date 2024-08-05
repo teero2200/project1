@@ -267,30 +267,45 @@
                                         </tbody>
                                     </table>
                                     <p class="mb-3">ความสามารถพิเศษ</p>
-                                   
+                                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
+                                        <div class="col">
+                                            <div class="p-3"><label for="inputEmail4" class="form-label">พิมดีด</label>
+                                                <input type="checkbox" id="inputEmail4">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-3"><label for="inputPassword4" class="form-label">ได้</label>
+                                                <input type="checkbox" id="inputPassword4">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-3"><label for="inputPassword4" class="form-label">ไม่ได้</label>
+                                                <input type="checkbox" id="inputPassword4">
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-3">
+                                                <div class="row">
+                                                    <p class="col-sm-8">ภาษาไทย</p>
+                                                    <input type="text" class="col-sm-4 form-control" id="inputPassword4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="p-3">
+                                                <div class="row">
+                                                    <p class="col-sm-8">ภาษาอังกฤษ</p>
+                                                    <input type="text" class="col-sm-4 form-control" id="inputPassword4">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+
                                     <div class="row ">
-                                        <div class="col-sm-3 mb-3">
-                                            <label for="inputEmail4" class="form-label">พิมดีด</label>
-                                            <input type="checkbox" id="inputEmail4">
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <label for="inputPassword4" class="form-label">ได้</label>
-                                            <input type="checkbox" id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-5">
-                                            <label for="inputPassword4" class="form-label">ไม่ได้</label>
-                                            <input type="checkbox" id="inputPassword4">
-                                        </div>
-                                        <div class="row md-3 mb-3">
-                                            <label for="inputPassword4" class="col-sm-2 form-label">ภาษาไทย</label>
-                                            <input type="text" class="col-sm-2 form-control" id="inputPassword4">
-                                            <label for="inputPassword4" class="col-sm-2 form-label">คำ/นาที</label>
-                                        </div>
-                                        <div class="row md-3 mb-3">
-                                            <label for="inputPassword4" class="col-sm-2 form-label">ภาษาอังกฤษ</label>
-                                            <input type="text" class="col-sm-2 form-control" id="inputPassword4">
-                                            <label for="inputPassword4" class="col-sm-2 form-label">คำ/นาที</label>
-                                        </div>
+                                       
+
+                                      
                                         <div class="row md-5 mb-3">
                                             <label for="inputPassword4" class=" form-label">โปรแกรมคอมพิวเตอร์</label>
                                             <textarea class="form-control col-md-6" id="exampleFormControlTextarea1" rows="3"></textarea>
