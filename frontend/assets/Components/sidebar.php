@@ -48,7 +48,7 @@ session_start();
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลสาขา</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="/project1/frontend/admins/teacher.php">
+                <a class="nav-link text-dark" href="/project1/frontend/admins/teachers/index.php">
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลส่วนตัวของอาจารย์</span></a>
             </li>
             <li class="nav-item">
