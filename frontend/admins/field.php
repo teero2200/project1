@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>เปลี่ยนรหัสผ่าน</title>
+    <title>หลักสูตรการฝึกงาน</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -39,36 +39,58 @@
                 <div class="container-fluid mt-5">
                     <!-- Page Heading -->
                     <div class="text-center mb-5">
-                        <h3 class="text-dark">เปลี่ยนรหัสผ่าน</h3>
+                        <p class="text-dark">หลักสูตรการฝึกงาน</p>
                     </div>
+
                     <div class="container mt-5">
-                        <form action="<?php echo  '/../project/backend/check_login_admin.php' ?>" method="post">
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสปัจจุบัน</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
+                        <div class="d-grid gap-2 mb-5">
+                            <a href="field.php" class="btn btn-primary" type="button">แบบคำร้องขอฝึกประสบการณ์ภาคสนาม</a>
+                        </div>
+
+
+                        <form class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputEmail1" class="form-label">รหัสนักศึกษา</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                             </div>
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">ชื่อ-สกุล</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
                             </div>
-                            <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">ยืนยันรหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="AM_PASSWORD" id="inputPassword3">
-                                </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">กลุ่มเรียน</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
                             </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary ">บันทึก</button>
-                                <button type="submit" class="btn btn-secondary ">ยกเลิก</button>
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">โทรศัพท์</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
                             </div>
 
+                            <div class="col-md-12 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">สาขาวิชา</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+                            <div class="d-flex mb-3">
+                                <div class="me-auto p-2">
+                                </div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-warning">
+                                            บันทึก
+                                        </button></a></div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-success">
+                                            แก้ไข
+                                        </button></a></div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-danger">
+                                            ลบ
+                                        </button></a></div>
+                            </div>
                         </form>
                     </div>
+
+
                 </div>
+
+
 
                 <!-- /.container-fluid -->
             </div>
