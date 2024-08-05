@@ -8,7 +8,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>หน้าแรก</title>
+    <title>ข้อมูลส่วนตัวของนักศึกษา</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
@@ -38,48 +38,300 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid mt-5">
                     <!-- Page Heading -->
-                    <div class="text-center mb-5">
-                        <h3 class="text-dark">เข้าสู่ระบบ</h3>
-                    </div>
+
                     <div class="container">
                         <form action="">
-                            <div class="row">
-                                <div class="row mb-3">
-                                    <label for="exampleInputEmail1" class="col-sm-2 col-form-label">รหัสประจำตัว</label>
-                                    <input type="text" class="form-control" name="ST_ID" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <!-- ข้อมูลส่วนตัวของนักศึกษา -->
+                            <div class="card mb-3">
+                                <div class="card-header text-center">
+                                    ข้อมูลส่วนตัวของนักศึกษา
                                 </div>
-
-                                <div class="col mb-3">
-                                    <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <span class="col-text" id="basic-addon2">@example.com</span>
-                                </div>
-
-                                <div class="col mb-3">
-                                    <label for="basic-url" class="form-label">Your vanity URL</label>
-                                    <div class="col">
-                                        <span class="col-text" id="basic-addon3">https://example.com/users/</span>
-                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-4 mb-3">
+                                            <label for="inputEmail4" class="form-label">รหัสนักศึกษา</label>
+                                            <input type="text" class="form-control" id="inputEmail4">
+                                        </div>
+                                        <div class="col-md-4 ">
+                                            <label for="inputPassword4" class="form-label">ชื่อสกุล</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-4 ">
+                                            <label for="inputPassword4" class="form-label">รูปนักศึกษา</label>
+                                            <input type="text" class="form-control " id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="inputPassword4" class="form-label">รหัสประจำตัวประชาชน</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">กลุ่มเรียน</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="inputPassword4" class="form-label">ชื่อสาขา</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">เบอร์โทร</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="inputPassword4" class="form-label">อีเมลล์</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="inputPassword4" class="form-label">ชื่อเล่น</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">วัน/เดือน/ปีเกิด</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-2 mb-3">
+                                            <label for="inputPassword4" class="form-label">อายุ</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="inputPassword4" class="form-label">ปี</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputPassword4" class="form-label">ศาสนา</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputPassword4" class="form-label">โรคประจำตัว</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-2 mb-3">
+                                            <label for="inputPassword4" class="form-label">บ้านเลขที่</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="inputPassword4" class="form-label">ถนน</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputPassword4" class="form-label">ตำบล</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputPassword4" class="form-label">อำเภอ</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <label for="inputPassword4" class="form-label">จังหวัด</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputPassword4" class="form-label">รหัสไปรษณีย์</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label for="inputPassword4" class="form-label">ผู้เกี่ยวข้อง</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="inputPassword4" class="form-label">เบอร์โทรผู้เกี่ยวข้อง</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
                                     </div>
-                                    <div class="form-text" id="basic-addon4">Example help text goes outside the input group.</div>
                                 </div>
                             </div>
-                            <div class="col mb-3">
-                                <span class="col-text">$</span>
-                                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-                                <span class="col-text">.00</span>
+
+                            <!-- ข้อมูลด้านการศึกษา -->
+                            <div class="card mb-3">
+                                <div class="card-header text-center">
+                                    ข้อมูลด้านการศึกษา
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="inputEmail4" class="form-label">ชื่อสถานศึกษา</label>
+                                            <input type="text" class="form-control" id="inputEmail4">
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <label for="inputPassword4" class="form-label">ระดับการศึกษา</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6 mb-3 ">
+                                            <label for="inputPassword4" class="form-label">คณะ</label>
+                                            <input type="text" class="form-control " id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">สาขาวิชา</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="inputPassword4" class="form-label">วิชาเอก</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <label for="inputPassword4" class="form-label">สาขาวิชา</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="inputPassword4" class="form-label">วิชาเอก</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6 ">
+                                            <label for="inputPassword4" class="form-label">เกรดเฉลี่ยสะสม</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="inputPassword4" class="form-label">อาจารย์ที่ปรึกษา</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="inputPassword4" class="form-label">เบอร์โทรอาจารย์ที่ปรึกษา</label>
+                                            <input type="text" class="form-control" id="inputPassword4">
+                                        </div>
+
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col mb-3">
-                                <input type="text" class="form-control" placeholder="Username" aria-label="Username">
-                                <span class="col-text">@</span>
-                                <input type="text" class="form-control" placeholder="Server" aria-label="Server">
+
+                            <!-- ข้อมูลด้านทักษะต่างๆ -->
+                            <div class="card mb-3">
+                                <div class="card-header text-center">
+                                    ข้อมูลด้านทักษะต่างๆ
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-flex justify-content-between mb-3">
+                                        <p>ข้อมูลด้านทักษะต่างๆ</p>
+                                        <p></p>
+                                        <button type="button">print</button>
+                                    </div>
+
+                                    <table class="table mb-3">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" rowspan="2" class="text-center">ภาษา</th>
+                                                <th scope="col " colspan="2" class="text-center">การฟัง</th>
+                                                <th scope="col " colspan="3" class="text-center">การเขียน</th>
+                                                <th scope="col " colspan="3" class="text-center">การอ่าน</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="col" rowspan="2" class="text-center">ภาษา</th>
+
+                                                <th scope="col">ดีมาก</th>
+                                                <th scope="col">พอใช้</th>
+                                                <th scope="col">ดีมาก</th>
+                                                <th scope="col">ปานกลาง</th>
+                                                <th scope="col">พอใช้</th>
+                                                <th scope="col">ดีมาก</th>
+                                                <th scope="col">ปานกลาง</th>
+                                                <th scope="col">พอใช้</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">ภาษาอังกฤษ</th>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">ภาษาไทย</th>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">ภาษา...</th>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                                <td><input type="checkbox" name="" id=""></td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                    <p class="mb-3">ความสามารถพิเศษ</p>
+                                   
+                                    <div class="row ">
+                                        <div class="col-sm-3 mb-3">
+                                            <label for="inputEmail4" class="form-label">พิมดีด</label>
+                                            <input type="checkbox" id="inputEmail4">
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="inputPassword4" class="form-label">ได้</label>
+                                            <input type="checkbox" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-5">
+                                            <label for="inputPassword4" class="form-label">ไม่ได้</label>
+                                            <input type="checkbox" id="inputPassword4">
+                                        </div>
+                                        <div class="row md-3 mb-3">
+                                            <label for="inputPassword4" class="col-sm-2 form-label">ภาษาไทย</label>
+                                            <input type="text" class="col-sm-2 form-control" id="inputPassword4">
+                                            <label for="inputPassword4" class="col-sm-2 form-label">คำ/นาที</label>
+                                        </div>
+                                        <div class="row md-3 mb-3">
+                                            <label for="inputPassword4" class="col-sm-2 form-label">ภาษาอังกฤษ</label>
+                                            <input type="text" class="col-sm-2 form-control" id="inputPassword4">
+                                            <label for="inputPassword4" class="col-sm-2 form-label">คำ/นาที</label>
+                                        </div>
+                                        <div class="row md-5 mb-3">
+                                            <label for="inputPassword4" class=" form-label">โปรแกรมคอมพิวเตอร์</label>
+                                            <textarea class="form-control col-md-6" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                        <div class="col-sm-3">
+                                            <label for="inputEmail4" class="form-label">ยากพาหนะ</label>
+                                            <input type="checkbox" id="inputEmail4">
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <label for="inputPassword4" class="form-label">รถยนต์</label>
+                                            <input type="checkbox" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-3">
+                                            <label for="inputPassword4" class="form-label">รถจักรยานยนต์</label>
+                                            <input type="checkbox" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="inputPassword4" class="form-label">มี</label>
+                                            <input type="checkbox" id="inputPassword4">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <label for="inputPassword4" class="form-label">ไม่มี</label>
+                                            <input type="checkbox" id="inputPassword4">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <div class="col">
-                                <span class="input-group-text">With textarea</span>
-                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                            <div class="d-flex mb-3">
+                                <div class="me-auto p-2">
+                                </div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-warning">
+                                            บันทึก
+                                        </button></a></div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-success">
+                                            แก้ไข
+                                        </button></a></div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-danger">
+                                            ลบ
+                                        </button></a></div>
                             </div>
-                            <button type="submit">บันทึก</button>
                         </form>
                     </div>
                 </div>

@@ -43,12 +43,54 @@
                     </div>
 
                     <div class="container mt-5">
-                        <div class="d-grid gap-2">
+                        <div class="d-grid gap-2 mb-5">
                             <button class="btn btn-primary" type="button">แบบคำร้องขอฝึกประสบการณ์วิชาชีพ</button>
-                            <button class="btn btn-primary" type="button">แบบคำร้องขอฝึกประสบการณ์ภาคสนาม</button>
                         </div>
+
+
+                        <form class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputEmail1" class="form-label">รหัสนักศึกษา</label>
+                                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">ชื่อ-สกุล</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">กลุ่มเรียน</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">โทรศัพท์</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+
+                            <div class="col-md-12 mb-3">
+                                <label for="exampleInputPassword1" class="form-label">สาขาวิชา</label>
+                                <input type="text" class="form-control" id="exampleInputPassword1">
+                            </div>
+                        
+                            <div class="d-flex mb-3">
+                                <div class="me-auto p-2">
+                                </div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-warning">
+                                            บันทึก
+                                        </button></a></div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-success">
+                                            แก้ไข
+                                        </button></a></div>
+                                <div class="p-2"><a href=""><button type="button" class="btn btn-danger">
+                                            ลบ
+                                        </button></a></div>
+                            </div>
+                        </form>
                     </div>
+
+
                 </div>
+
+
 
                 <!-- /.container-fluid -->
             </div>

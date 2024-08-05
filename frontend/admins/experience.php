@@ -39,34 +39,92 @@
                 <div class="container-fluid mt-5">
                     <!-- Page Heading -->
                     <div class="text-center mb-5">
-                        <h3 class="text-dark">เปลี่ยนรหัสผ่าน</h3>
+                        <h3 class="text-dark">รายงานประสบการณ์</h3>
                     </div>
                     <div class="container mt-5">
-                        <form action="<?php echo  '/../project/backend/check_login_admin.php' ?>" method="post">
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสปัจจุบัน</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="AM_ID" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">ยืนยันรหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="AM_PASSWORD" id="inputPassword3">
-                                </div>
-                            </div>
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-primary ">บันทึก</button>
-                                <button type="submit" class="btn btn-secondary ">ยกเลิก</button>
-                            </div>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">สาขาวิชา</th>
+                                    <th scope="col">ระดับการศึกษา</th>
+                                    <th scope="col">คณะ</th>
+                                    <th scope="col">อาจาร์ยที่ปรึกษา</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">ระบบสารสนเทศทางธุรกิจ</th>
+                                    <td>ปริญญาตรี</td>
+                                    <td>การจัดการ</td>
+                                    <td>****</td>
+                                </tr>
 
-                        </form>
+                            </tbody>
+                        </table>
+
+                        <select class="col-md-4  form-select mb-4" aria-label="Default select example">
+                            <option selected>ปีที่ฝึก</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">ลำดับ</th>
+                                    <th scope="col">รหัสนักศึกษา</th>
+                                    <th scope="col">ชื่อนักศึกษา</th>
+                                    <th scope="col">สถานที่ฝึก</th>
+                                    <th scope="col">ปีที่ฝึก</th>
+                                    <th scope="col">ที่อยู่</th>
+                                    <th scope="col">อำเภอ</th>
+                                    <th scope="col">จังหวัด</th>
+                                    <th scope="col">เบอร์โทรติดต่อ</th>
+                                    <th scope="col">ตำแหน่งงาน</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">1</th>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">2</th>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">3</th>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                    <td>xxxxx</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
