@@ -40,7 +40,7 @@ session_start();
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน้าแรก</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="/project1/frontend/admins/new.php">
+                <a class="nav-link text-dark" href="/project1/frontend/admins/new/index.php">
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข่าวสาร</span></a>
             </li>
             <li class="nav-item">

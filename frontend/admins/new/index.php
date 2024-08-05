@@ -13,20 +13,20 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
   <!-- Custom fonts for this template-->
-  <link href="../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
+  <link href="../../assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet" />
 
   <!-- Custom styles for this template-->
-  <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet" />
+  <link href="../../assets/css/sb-admin-2.min.css" rel="stylesheet" />
 </head>
 
 <body id="page-top">
-  <?php include('../assets/Components/navbar.php') ?>
+  <?php include('../../assets/Components/navbar.php') ?>
 
   <!-- Page Wrapper -->
   <div id="wrapper">
     <!-- Sidebar -->
-    <?php include('../assets/Components/sidebar.php') ?>
+    <?php include('../../assets/Components/sidebar.php') ?>
     <!-- End of Sidebar -->
 
     <!-- Content Wrapper -->
@@ -41,7 +41,9 @@
         <div class="container-fluid mt-5">
           <!-- Page Heading -->
           <div class="text-center">
+
             <h3 class="text-dark">หัวข้อข่าวสาร</h3>
+
           </div>
           <table class="table">
             <thead class="table-dark">
@@ -53,32 +55,44 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, recusandae!</td>
-                <td>12-3-44</td>
-                <td>a b c</td>
-              </tr>
+              <?php
+              include('../../../database/connect.php');
+              $sql = "SELECT * FROM news";
+              $result = $objCon->query($sql);
+              if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+              ?>
+                  <tr>
+                    <td><?= $row['N_ID'] ?></td>
+                    <td><?= $row['N_NAME'] ?></td>
+                    <td><?= $row['N_DATE'] ?></td>
+                    <td>
+                      <button type="button" class="btn btn-warning">แก้ไข</button>
+                      <a href="../../../backend/new/delete.php?id=<?= $row['N_ID'] ?>"><button type="button" class="btn btn-danger">ลบ</button></a>
+                    </td>
+                  </tr>
+
+                <?php } ?>
+              <?php
+              } else {
+                echo "0 results";
+              }
+
+              $objCon->close();
+
+              ?>
             </tbody>
           </table>
 
           <div class="mt-5">
             <div class="d-flex mb-3">
-              <div class="me-auto p-2"> <a href=""><button type="button" class="btn btn-primary">
+              <div class="me-auto p-2"> <a href="add.php"><button type="button" class="btn btn-primary">
                     ดาวโหลดไฟล
                   </button></a>
               </div>
-              <div class="p-2"><a href=""><button type="button" class="btn btn-warning">
-                    บันทึก
-                  </button></a></div>
-              <div class="p-2"><a href=""><button type="button" class="btn btn-success">
-                    แก้ไข
-                  </button></a></div>
-              <div class="p-2"><a href=""><button type="button" class="btn btn-danger">
-                   ลบ
-                  </button></a></div>
-            </div>
 
+
+            </div>
           </div>
         </div>
 
@@ -87,7 +101,7 @@
       <!-- End of Main Content -->
 
       <!-- Footer -->
-      <?php include('../assets/Components/footer.php') ?>
+      <?php include('../../assets/Components/footer.php') ?>
       <!-- End of Footer -->
     </div>
     <!-- End of Content Wrapper -->
@@ -102,21 +116,21 @@
 
 
   <!-- Bootstrap core JavaScript-->
-  <script src="../assets/vendor/jquery/jquery.min.js"></script>
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="../../assets/vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="../assets/js/sb-admin-2.min.js"></script>
+  <script src="../../assets/js/sb-admin-2.min.js"></script>
 
   <!-- Page level plugins -->
-  <script src="../assets/vendor/chart.js/Chart.min.js"></script>
+  <script src="../../assets/vendor/chart.js/Chart.min.js"></script>
 
   <!-- Page level custom scripts -->
-  <script src="../assets/js/demo/chart-area-demo.js"></script>
-  <script src="../assets/js/demo/chart-pie-demo.js"></script>
+  <script src="../../assets/js/demo/chart-area-demo.js"></script>
+  <script src="../../assets/js/demo/chart-pie-demo.js"></script>
 </body>
 
 </html>
