@@ -46,7 +46,7 @@
                             <div class="row mb-3">
                                 <label for="inputId" class="col-sm-2 col-form-label">รหัสประจำตัว</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="ID_CN" id="inputId">
+                                    <input type="text" class="form-control" name="ID_IDEN" id="inputId">
                                 </div>
                             </div>
                             <div class="row mb-3">

@@ -3,9 +3,9 @@ session_start();
 include_once('../database/connect.php');
 
 
-$strID = $_POST['ID_CN'];
+$strID = $_POST['ID_IDEN'];
 $strPassword = sha1($_POST['password']);
-$strSQL = "SELECT * FROM users WHERE ID_CN = '$strID' AND password = '$strPassword'";
+$strSQL = "SELECT * FROM users WHERE ID_IDEN = '$strID' AND password = '$strPassword'";
 $objQuery = mysqli_query($objCon, $strSQL);
 $objResult = mysqli_fetch_array($objQuery, MYSQLI_ASSOC);
 
