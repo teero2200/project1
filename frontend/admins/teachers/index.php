@@ -66,7 +66,7 @@
                                         <td><?= $row['name'] ?></td>
                                         <td>
                                             <a href="edit.php?id=<?= $row['id'] ?>"><button type="button" class="btn btn-warning">แก้ไข</button></a>
-                                            <a href="../../../backend/new/delete.php?id=<?= $row['id'] ?>"><button type="button" class="btn btn-danger">ลบ</button></a>
+                                            <a href="../../../backend/teacher/delete.php?id=<?= $row['id'] ?>"><button type="button" class="btn btn-danger">ลบ</button></a>
                                         </td>
                                     </tr>
 

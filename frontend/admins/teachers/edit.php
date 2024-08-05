@@ -1,3 +1,14 @@
+<?php include_once('../../../database/connect.php');
+$id = $_GET['id'];
+$sql = "SELECT * FROM users WHERE id = $id";
+// $result = $conn->query($sql);
+$result = $objCon->query($sql);
+$row = $result->fetch_assoc();
+
+// print_r($row);
+// die;
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -43,20 +54,20 @@
                     </div>
 
 
-                    <form action="../../../backend/teacher/insert.php" method="post">
+                    <form action="../../../backend/teacher/update.php?id=<?= $row['id'] ?>" method="post">
                         <div class="row g-3 align-items-center justify-content-evenly mb-3">
 
                             <div class="col-auto">
                                 <label for="inputmajor" class="col-form-label">รหัสประจำตัวอาจารย์</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text" name="ID_IDEN"  id="inputmajor" class="form-control">
+                                <input type="text" name="ID_IDEN" id="inputmajor" value="<?= $row['ID_IDEN'] ?>" class="form-control">
                             </div>
                             <div class="col-auto">
-                                <label for="inputmajor"  class="col-form-label">รหัสสาขา</label>
+                                <label for="inputmajor" class="col-form-label">รหัสสาขา</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text" id="inputmajor" name="id_major"  class="form-control">
+                                <input type="text" id="inputmajor" name="id_major" value="<?= $row['id_major'] ?>" class="form-control">
                             </div>
                         </div>
 
@@ -65,13 +76,13 @@
                                 <label for="inputmajor" class="col-form-label">ชื่อ-สกุล</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text"  name="name" id="inputmajor" class="form-control">
+                                <input type="text" name="name" id="inputmajor" value="<?= $row['name'] ?>" class="form-control">
                             </div>
                             <div class="col-auto">
                                 <label for="inputmajor" class="col-form-label">รหัสผ่าน</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text"  name="password" id="inputmajor" class="form-control">
+                                <input type="password" name="password" id="inputmajor" value="<?= $row['password'] ?>" class="form-control">
                             </div>
                         </div>
 
@@ -81,24 +92,24 @@
                                 <label for="inputmajor" class="col-form-label">เบอร์โทร</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text" name="number" id="inputmajor" class="form-control">
+                                <input type="text" name="number" id="inputmajor" value="<?= $row['number'] ?>"  class="form-control">
                             </div>
                             <div class="col-auto">
                                 <label for="inputmajor" class="col-form-label">อีเมล</label>
                             </div>
                             <div class="col-auto">
-                                <input type="text" name="email" id="inputmajor" class="form-control">
+                                <input type="text" name="email" id="inputmajor" value="<?= $row['email'] ?>" class="form-control">
                             </div>
                         </div>
 
-                      
+
 
                         <div class="d-flex mb-3">
                             <div class="me-auto p-2">
                             </div>
                             <div class="p-2"><button type="submit" class="btn btn-warning">
-                                        บันทึก
-                                    </button></div>
+                                    บันทึก
+                                </button></div>
                             <div class="p-2"><a href=""><button type="button" class="btn btn-success">
                                         แก้ไข
                                     </button></a></div>
