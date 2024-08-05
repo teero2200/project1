@@ -44,7 +44,7 @@ session_start();
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข่าวสาร</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-dark" href="/project1/frontend/admins/major.php">
+                <a class="nav-link text-dark" href="/project1/frontend/admins/major/major.php">
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลสาขา</span></a>
             </li>
             <li class="nav-item">
