@@ -116,7 +116,8 @@ $name = $_GET['name'] ?? NULL;
                                         <tr>
                                             <td><?= $row['N_ID'] ?></td>
                                             <td><?= $row['N_NAME'] ?></td>
-                                            <td><?= $row['N_DATE'] ?></td>
+                                            <td>
+                                                <?=  $row['N_DATE'] ?></td>
                                             <td>
                                                 <a href="edit.php?id=<?= $row['N_ID'] ?>"><button type="button" class="btn btn-warning">แก้ไข</button></a>
                                                 <a href="../../../backend/new/delete.php?id=<?= $row['N_ID'] ?>"><button type="button" class="btn btn-danger">ลบ</button></a>
