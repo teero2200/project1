@@ -86,7 +86,7 @@
           <div class="mt-5">
             <div class="d-flex mb-3">
               <div class="me-auto p-2"> <a href="add.php"><button type="button" class="btn btn-primary">
-                    ดาวโหลดไฟล
+              ดาวน์โหลดไฟล์
                   </button></a>
               </div>
 

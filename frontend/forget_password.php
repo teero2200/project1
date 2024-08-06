@@ -46,13 +46,14 @@
                     </div>
                     <div class="container mt-5">
                         <form action="<?php echo  '/../project1/backend/forget_password.php' ?>" method="post">
-                            <div class="row mb-3">
-                                <label for="email" class="col-sm-2 col-form-label">อีเมลล์</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="email" id="email">
+                            <div class="row mb-3 text-center">
+                                <div class="mb-3 ">
+                                    <label for="formGroupExampleInput" class="form-label me-3">อีเมลล์</label>
+                                    <input type="text" class="col-md-2 " name="email" id="formGroupExampleInput"  placeholder="ewd@fdsf.com">
                                 </div>
+                              
                             </div>
-                            
+
                             <div class="text-center mt-4">
                                 <button type="submit" class="btn btn-primary ">รีเซ็ตรหัสผานใหม่</button>
                             </div>

@@ -56,6 +56,7 @@
 
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary ">เข้าสู่ระบบ</button>
+                                <button type="reset" class="btn btn-secondary ">ยกเลิก</button>
                             </div>
                         </form>
 

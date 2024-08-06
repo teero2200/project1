@@ -44,25 +44,22 @@
                     <div class="container mt-5">
                         <form action="<?php echo  '/../project1/backend/reset_password.php' ?>" method="post">
                             <input type="hidden" name="id" value="<?php echo $_GET['id'] ?? ''; ?>">
+                            <div class="text-center">
+                                <div class="mb-3 ">
+                                    <label for="formGroupExampleInput" class="form-label me-3">รหัสปัจจุบัน</label>
+                                    <input type="password" class="col-md-2 " name="old_password" id="formGroupExampleInput" maxlength="13" placeholder="xxxxxxxx">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInput2" class="form-label me-3">รหัสใหม่</label>
+                                    <input type="password" class="col-md-2 " name="New_password" id="formGroupExampleInput2" placeholder="xxxxxx">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="formGroupExampleInput2" class="form-label me-3">ยืนยันรหัสใหม่</label>
+                                    <input type="password" class="col-md-2 " name="Cf_New_password" id="formGroupExampleInput2" placeholder="xxxxxx">
+                                </div>
+                            </div>
 
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสปัจจุบัน</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="old_password" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputId" class="col-sm-2 col-form-label">รหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="New_password" id="inputId">
-                                </div>
-                            </div>
-                            <div class="row mb-3">
-                                <label for="inputPassword3" class="col-sm-2 col-form-label">ยืนยันรหัสใหม่</label>
-                                <div class="col-sm-10">
-                                    <input type="password" class="form-control" name="Cf_New_password" id="inputPassword3">
-                                </div>
-                            </div>
+
                             <div class="text-center">
                                 <button type="submit" class="btn btn-primary ">บันทึก</button>
                                 <button type="reset" class="btn btn-secondary ">ยกเลิก</button>
