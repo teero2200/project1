@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 01, 2024 at 11:53 AM
+-- Generation Time: Aug 07, 2024 at 05:21 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -20,25 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `db_project`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `admin`
---
-
-CREATE TABLE `admin` (
-  `AM_ID` varchar(13) NOT NULL,
-  `AM_NAME` varchar(30) NOT NULL,
-  `AM_PASSWORD` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `admin`
---
-
-INSERT INTO `admin` (`AM_ID`, `AM_NAME`, `AM_PASSWORD`) VALUES
-('1849901481431', 'Admin', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441');
 
 -- --------------------------------------------------------
 
@@ -90,7 +71,7 @@ CREATE TABLE `fm_location` (
 CREATE TABLE `major` (
   `MAJOR_ID` int(11) NOT NULL,
   `MAJOR_NAME` varchar(35) NOT NULL,
-  `MAJOR_COURSETYPE` varchar(2) NOT NULL
+  `MAJOR_COURSETYPE` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
@@ -98,8 +79,9 @@ CREATE TABLE `major` (
 --
 
 INSERT INTO `major` (`MAJOR_ID`, `MAJOR_NAME`, `MAJOR_COURSETYPE`) VALUES
-(1, 'A', ''),
-(2, 'b', '');
+(4, '01 วิชาเอกการจัดการทั่วไป', '02วิชาชีพ'),
+(5, '02 วิชาเอกการตลาด', ''),
+(6, '03 วิชาเอกบริหารทรัพยากร', '');
 
 -- --------------------------------------------------------
 
@@ -109,60 +91,18 @@ INSERT INTO `major` (`MAJOR_ID`, `MAJOR_NAME`, `MAJOR_COURSETYPE`) VALUES
 
 CREATE TABLE `news` (
   `N_ID` int(11) NOT NULL,
-  `AM_ID` varchar(13) NOT NULL,
-  `N_NAME` varchar(35) NOT NULL,
-  `N_DETAILS` text NOT NULL,
-  `N_FD` blob NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `student`
---
-
-CREATE TABLE `student` (
-  `ST_ID` varchar(13) NOT NULL,
-  `MAJOR_ID` varchar(2) NOT NULL,
-  `ST_NAME` varchar(30) NOT NULL,
-  `ST_PASSWORD` varchar(255) NOT NULL,
-  `ST_ID_CN` varchar(13) NOT NULL,
-  `ST_PN` varchar(10) NOT NULL,
-  `ST_EMAIL` varchar(30) NOT NULL,
-  `ST_SG` varchar(9) NOT NULL,
-  `ST_IMAGE` blob NOT NULL,
-  `ST _NICKNAME` varchar(10) NOT NULL,
-  `ST _DATE` date NOT NULL DEFAULT current_timestamp(),
-  `ST _AGE` int(11) NOT NULL,
-  `ST _RELIGION` varchar(10) NOT NULL,
-  `ST _CD` varchar(40) NOT NULL,
-  `ST _ADDRESS` varchar(25) NOT NULL,
-  `ST _SD` varchar(10) NOT NULL,
-  `ST _PROVINCE` varchar(20) NOT NULL,
-  `ST _ZC` varchar(5) NOT NULL,
-  `ST _CP` varchar(30) NOT NULL,
-  `ST _CNPN` varchar(10) NOT NULL,
-  `ST_EDUCNAME` varchar(20) NOT NULL,
-  `ST_EDUCEL` varchar(30) NOT NULL,
-  `ST_EDUC_MAJOR` varchar(20) NOT NULL,
-  `ST _EDUCSM` varchar(30) NOT NULL,
-  `ST _EDUCGPA` varchar(4) NOT NULL,
-  `ST _EDUCA` varchar(30) NOT NULL,
-  `ST _EDUCPN` varchar(10) NOT NULL
+  `N_NAME` varchar(35) DEFAULT NULL,
+  `N_DETAILS` text DEFAULT NULL,
+  `N_FD` blob DEFAULT NULL,
+  `N_DATE` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `student`
+-- Dumping data for table `news`
 --
 
-INSERT INTO `student` (`ST_ID`, `MAJOR_ID`, `ST_NAME`, `ST_PASSWORD`, `ST_ID_CN`, `ST_PN`, `ST_EMAIL`, `ST_SG`, `ST_IMAGE`, `ST _NICKNAME`, `ST _DATE`, `ST _AGE`, `ST _RELIGION`, `ST _CD`, `ST _ADDRESS`, `ST _SD`, `ST _PROVINCE`, `ST _ZC`, `ST _CP`, `ST _CNPN`, `ST_EDUCNAME`, `ST_EDUCEL`, `ST_EDUC_MAJOR`, `ST _EDUCSM`, `ST _EDUCGPA`, `ST _EDUCA`, `ST _EDUCPN`) VALUES
-('1631010541137', '', 'ธีรภัทร ศรีทองกุล', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '', '', 'teebin2019@gmail.com', '', '', '', '2024-07-03', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('1631010541138', '', 'ธีรภัทร ศรีทองกุล', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '', '', 'teebin2020@gmail.com', '', '', '', '2024-07-03', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('1631010541139', '', 'ธีรภัทร ศรีทองกุล', 'f7c3bc1d808e04732adf679965ccc34ca7ae3441', '', '', 'teebin2021@gmail.com', '', '', '', '2024-07-03', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('1631010541140', '', 'ธีรภัทร ศรีทองกุล', '7c4a8d09ca3762af61e59520943dc26494f8941b', '', '', 'teebin2022@gmail.com', '', '', '', '2024-07-04', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('1631010541141', '', 'ธีรภัทร ศรีทองกุล', '7c4a8d09ca3762af61e59520943dc26494f8941b', '', '', 'teebin2023@gmail.com', '', '', '', '2024-07-04', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('1631010541180', '', 'Tree Srithongkul', '7c4a8d09ca3762af61e59520943dc26494f8941b', '', '', '123@gmail.com', '', '', '', '2024-07-08', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''),
-('1631010541181', '', 'Tree Srithongkul', '7c4a8d09ca3762af61e59520943dc26494f8941b', '', '', '1234@gmail.com', '', '', '', '2024-07-08', 0, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `news` (`N_ID`, `N_NAME`, `N_DETAILS`, `N_FD`, `N_DATE`) VALUES
+(69, 'ข่าวบอบู๋', 'ที่โรงอาหาร', NULL, '2024-08-06 02:53:16');
 
 -- --------------------------------------------------------
 
@@ -190,34 +130,13 @@ INSERT INTO `tblusers` (`ID`, `FirstName`, `LastName`, `MobileNumber`, `Email`, 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `teacher`
---
-
-CREATE TABLE `teacher` (
-  `TC_ID` varchar(13) NOT NULL,
-  `MAJOR_ID` int(11) NOT NULL,
-  `TC_NAME` varchar(30) NOT NULL,
-  `TC_PASSWORD` varchar(255) NOT NULL,
-  `TC_NUMBER` varchar(10) NOT NULL,
-  `TC_EMAIL` varchar(35) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `teacher`
---
-
-INSERT INTO `teacher` (`TC_ID`, `MAJOR_ID`, `TC_NAME`, `TC_PASSWORD`, `TC_NUMBER`, `TC_EMAIL`) VALUES
-('1631010541137', 1, 't', '13d3cbfbc80930dbd217ff41e4f0cdda306b0602', '0635965816', '1631010541137@rmutr.ac.th');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `users`
 --
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `ID_CN` varchar(13) DEFAULT NULL,
+  `ID_IDEN` varchar(100) DEFAULT NULL COMMENT 'รหัสประจำตัว',
   `name` varchar(30) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` text NOT NULL,
@@ -251,14 +170,13 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `ID_CN`, `name`, `email`, `password`, `id_major`, `number`, `role`, `PN`, `SG`, `IMAGE`, `NICKNAME`, `DATE`, `AGE`, `RELIGION`, `CD`, `ADDRESS`, `SD`, `PROVINCE`, `ZC`, `CP`, `CNPN`, `EDUCNAME`, `EDUCEL`, `EDUC_MAJOR`, `EDUCSM`, `EDUCGPA`, `EDUCA`, `EDUCPN`) VALUES
-(1, '1631010541137', 'tee', 'teebin2019@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', ''),
-(2, '1849901481431', 'arue', 'arue@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'teacher', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', ''),
-(3, '1631010531138', 'arue', 'arue1@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'student', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', ''),
-(5, '1', 'Tawan', 'Tawan@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(6, '2', 'teacher_Tawan', 'Tawan1@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'teacher', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7, '3', 'student_Tawan', 'Tawan2@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'student', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, '12345678901', 'ew', 'qwe@sfdsfs.com', '416f8f6e105370e7b9d0fd983141f00b613477f8', 1, '92131313', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `ID_CN`, `ID_IDEN`, `name`, `email`, `password`, `id_major`, `number`, `role`, `PN`, `SG`, `IMAGE`, `NICKNAME`, `DATE`, `AGE`, `RELIGION`, `CD`, `ADDRESS`, `SD`, `PROVINCE`, `ZC`, `CP`, `CNPN`, `EDUCNAME`, `EDUCEL`, `EDUC_MAJOR`, `EDUCSM`, `EDUCGPA`, `EDUCA`, `EDUCPN`) VALUES
+(1, '1631010541137', '1631010541137', 'tee', 'teebin2019@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', ''),
+(3, '1631010531138', '1631010531138', 'arue', 'arue1@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'student', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', ''),
+(5, '1', '1', 'Tawan', 'Tawan@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, '3', '3', 'student_Tawan', 'Tawan2@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'student', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, '12345678901', '12345678901', 'ew', 'qwe@sfdsfs.com', '416f8f6e105370e7b9d0fd983141f00b613477f8', 1, '92131313', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(15, NULL, '13456789', 'สวัสดีครับ ชาวโลก', 'Tawan1@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', 1, '0635965816', 'teacher', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -291,19 +209,10 @@ CREATE TABLE `various_skills` (
 --
 
 --
--- Indexes for table `admin`
---
-ALTER TABLE `admin`
-  ADD PRIMARY KEY (`AM_ID`);
-
---
 -- Indexes for table `fm01`
 --
 ALTER TABLE `fm01`
-  ADD PRIMARY KEY (`FM01_ID`),
-  ADD KEY `TC_ID` (`TC_ID`,`ST_ID`,`FMLN_ID`),
-  ADD KEY `ST_ID` (`ST_ID`),
-  ADD KEY `FMLN_ID` (`FMLN_ID`);
+  ADD PRIMARY KEY (`FM01_ID`);
 
 --
 -- Indexes for table `fm_location`
@@ -321,15 +230,7 @@ ALTER TABLE `major`
 -- Indexes for table `news`
 --
 ALTER TABLE `news`
-  ADD PRIMARY KEY (`N_ID`),
-  ADD KEY `AM_ID` (`AM_ID`);
-
---
--- Indexes for table `student`
---
-ALTER TABLE `student`
-  ADD PRIMARY KEY (`ST_ID`),
-  ADD KEY `MAJOR_ID` (`MAJOR_ID`);
+  ADD PRIMARY KEY (`N_ID`);
 
 --
 -- Indexes for table `tblusers`
@@ -338,25 +239,18 @@ ALTER TABLE `tblusers`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Indexes for table `teacher`
---
-ALTER TABLE `teacher`
-  ADD PRIMARY KEY (`TC_ID`),
-  ADD KEY `MAJOR_ID` (`MAJOR_ID`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `ID_CN` (`ID_CN`);
+  ADD UNIQUE KEY `ID_CN` (`ID_CN`),
+  ADD UNIQUE KEY `ID_IDEN` (`ID_IDEN`);
 
 --
 -- Indexes for table `various_skills`
 --
 ALTER TABLE `various_skills`
-  ADD PRIMARY KEY (`VS_ID`),
-  ADD KEY `ST_ID` (`ST_ID`);
+  ADD PRIMARY KEY (`VS_ID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -378,13 +272,13 @@ ALTER TABLE `fm_location`
 -- AUTO_INCREMENT for table `major`
 --
 ALTER TABLE `major`
-  MODIFY `MAJOR_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `MAJOR_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `N_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `N_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
@@ -396,7 +290,7 @@ ALTER TABLE `tblusers`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `various_skills`
@@ -421,12 +315,6 @@ ALTER TABLE `fm01`
 --
 ALTER TABLE `news`
   ADD CONSTRAINT `news_ibfk_1` FOREIGN KEY (`AM_ID`) REFERENCES `admin` (`AM_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `teacher`
---
-ALTER TABLE `teacher`
-  ADD CONSTRAINT `teacher_ibfk_1` FOREIGN KEY (`MAJOR_ID`) REFERENCES `major` (`MAJOR_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `various_skills`

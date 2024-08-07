@@ -91,10 +91,10 @@
             </button>
           </div>
 
-         
+
           <div class="mt-5">
             <a href=""><button type="button" class="btn btn-primary">
-                ดาวโหลดไฟล
+                ดาวน์โหลดไฟล์
               </button></a>
           </div>
         </div>

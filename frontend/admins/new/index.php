@@ -65,7 +65,13 @@
                   <tr>
                     <td><?= $row['N_ID'] ?></td>
                     <td><?= $row['N_NAME'] ?></td>
-                    <td><?= $row['N_DATE'] ?></td>
+                    <td>
+                      <?php
+                      $date = date_create($row['N_DATE']);
+                      echo date_format($date, 'd-m-');
+                      echo date_format($date, 'Y')+543;
+                      ?>
+                    </td>
                     <td>
                       <a href="edit.php?id=<?= $row['N_ID'] ?>"><button type="button" class="btn btn-warning">แก้ไข</button></a>
                       <a href="../../../backend/new/delete.php?id=<?= $row['N_ID'] ?>"><button type="button" class="btn btn-danger">ลบ</button></a>
@@ -86,7 +92,7 @@
           <div class="mt-5">
             <div class="d-flex mb-3">
               <div class="me-auto p-2"> <a href="add.php"><button type="button" class="btn btn-primary">
-                    ดาวโหลดไฟล
+                    ดาวน์โหลดไฟล์
                   </button></a>
               </div>
 
