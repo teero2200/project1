@@ -151,6 +151,10 @@ session_start();
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตรวจสอบสถานะการอนุมัติ</span></a>
             </li>
             <li class="nav-item">
+                <a class="nav-link text-dark" href="/project1/frontend/students/no_approve.php">
+                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไม่อนุมัติ</span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/students/undo.php">
                     <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูข้อมูลย้อนหลัง</span></a>
             </li>

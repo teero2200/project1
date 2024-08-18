@@ -36,147 +36,94 @@
 
 
                 <!-- Begin Page Content -->
-                <div class="container-fluid mt-5">
+                <div class="container-fluid   text-dark mt-5">
                     <!-- Page Heading -->
-                    <div class="text-center mb-5">
-                        <p class="text-dark">ตรวจสอบสถานะการอนุมัติ</p>
+                    <div class="row d-flex align-items-center">
+                        <div class="col-10 text-center">
+                            <p>ข้อมูลสถานที่ฝึกประสบการณ์วิชาชีพ</p>
+                        </div>
+                        <div class="col-1">
+                            <p>สถานะ</p>
+                        </div>
+                        <div class="col-1">
+                            <button type="button" class="btn btn-outline-secondary">อนุมัติ</button>
+                        </div>
                     </div>
 
-                    <div class="container mt-5">
-                        <div class="card mb-3">
-                            <div class="card-header">
-                                สถานะการอนุมัติ
-                            </div>
-                            <div class="card-body">
-                                <div class="row justify-content-end mb-3">
-                                    <div class="col-4">
-                                        ข้อมูลสถานที่ฝึกประสบการณ์วิชาชีพ
+                    <div class="container mt-5 ms-4 pt-3 text-dark">
+                        <form>
+                            <div class="row">
+                                <div class="input-group mb-3">
+                                    <div class="col-md-auto ">
+                                        <label for="exampleInputEmail1" class="form-label">ชื่อหน่วยงาน/สถานประกอบการ</label>
                                     </div>
-                                    <div class="col-4">
-                                        สถานะ <a href="#">อนุมัติ</a>
+                                    <div class="col-3 mb-3 ">
+                                        <input type="text" class="form-control form-control-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="col-md-auto mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">ที่ตั้ง/หมู่/ตำบล/อำเภอ/จังหวัด/รหัสไปรษณีย์</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="exampleInputPassword1">
+                                    </div>
+
+                                </div>
+                                <div class="input-group mb-3">
+                                    <div class="col-md-auto ">
+                                        <label for="exampleInputPassword1" class="form-label">โทรศัพท์</label>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <input type="text" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="col-md-auto">
+                                        <label for="exampleInputPassword1" class="form-label">โทรสาร</label>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <input type="text" class="form-control" id="exampleInputPassword1">
                                     </div>
                                 </div>
 
-                                <form class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">ชื่อหน่วยงาน/สถานประกอบการ</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">ที่ตั้ง/หมู่/ตำบล/อำเภอ/จังหวัด/รหัสไปรษณีย์</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">โทรศัพท์</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">โทรสาร</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-
-                                    <div class="col-md-12 mb-3">
+                                <div class="input-group mb-3">
+                                    <div class="col-auto mb-3">
                                         <label for="exampleInputPassword1" class="form-label">อีเมล</label>
+                                    </div>
+                                    <div class="col-md-4">
                                         <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-12 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">เรียนตำแหน่งหัวหน้าหน่วยงาน/สถานประกอบการ</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-12 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">แผนกงานที่ปฎิบัติ(กอง/ฝ่าย/แผนก ฯลฯ)</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-12 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">ลักษณะงานที่ปฎิบัติ(ถ้ามี)</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-
-                                    <div class="d-flex mb-3">
-                                        <div class="me-auto p-2">
-                                        </div>
-                                        <div class="p-2"><a href=""><button type="button" class="btn btn-warning">
-                                                    บันทึก
-                                                </button></a></div>
-                                        <div class="p-2"><a href=""><button type="button" class="btn btn-success">
-                                                    แก้ไข
-                                                </button></a></div>
-                                        <div class="p-2"><a href=""><button type="button" class="btn btn-danger">
-                                                    ลบ
-                                                </button></a></div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
-                        
-                        <div class="card">
-                            <div class="card-header">
-                                สถานะการอนุมัติ
-                            </div>
-                            <div class="card-body">
-                                <div class="row justify-content-end mb-3">
-                                    <div class="col-4">
-                                        ข้อมูลสถานที่ฝึกประสบการณ์วิชาชีพ
-                                    </div>
-                                    <div class="col-4">
-                                        สถานะ <a href="#">ไม่อนุมัติ</a>
                                     </div>
                                 </div>
-
-                                <form class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="exampleInputEmail1" class="form-label">ชื่อหน่วยงาน/สถานประกอบการ</label>
-                                        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">ที่ตั้ง/หมู่/ตำบล/อำเภอ/จังหวัด/รหัสไปรษณีย์</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">โทรศัพท์</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">โทรสาร</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-
-                                    <div class="col-md-12 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">อีเมล</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-12 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">เรียนตำแหน่งหัวหน้าหน่วยงาน/สถานประกอบการ</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-12 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">แผนกงานที่ปฎิบัติ(กอง/ฝ่าย/แผนก ฯลฯ)</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-                                    <div class="col-md-12 mb-3">
-                                        <label for="exampleInputPassword1" class="form-label">ลักษณะงานที่ปฎิบัติ(ถ้ามี)</label>
-                                        <input type="text" class="form-control" id="exampleInputPassword1">
-                                    </div>
-
-                                    <div class="d-flex mb-3">
-                                        <div class="me-auto p-2">
-                                        </div>
-                                        <div class="p-2"><a href=""><button type="button" class="btn btn-warning">
-                                                    บันทึก
-                                                </button></a></div>
-                                        <div class="p-2"><a href=""><button type="button" class="btn btn-success">
-                                                    แก้ไข
-                                                </button></a></div>
-                                        <div class="p-2"><a href=""><button type="button" class="btn btn-danger">
-                                                    ลบ
-                                                </button></a></div>
-                                    </div>
-                                </form>
                             </div>
-                        </div>
+                            <div class="input-group mb-3">
+                                <div class="col-md-auto">
+                                    <label for="exampleInputPassword1" class="form-label">เรียนตำแหน่งหัวหน้าหน่วยงาน/สถานประกอบการ</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
 
 
+                            <div class="input-group mb-3">
+                                <div class="col-md-auto ">
+                                    <label for="exampleInputPassword1" class="form-label">แผนกงานที่ปฎิบัติ(กอง/ฝ่าย/แผนก ฯลฯ)</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                </div>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="col-md-auto ">
+                                    <label for="exampleInputPassword1" class="form-label">ลักษณะงานที่ปฎิบัติ(ถ้ามี)</label>
+                                </div>
+                                <div class="col-md-4 me-auto">
+                                    <input type="text" class="form-control" id="exampleInputPassword1">
+                                </div>
+                                <div class="col-1 ">
+                                    <a href="#" class="btn btn-outline-secondary ">print</a>
+                                </div>
+                            </div>
+                        </form>
                     </div>
 
 

@@ -18,6 +18,32 @@
 
     <!-- Custom styles for this template-->
     <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet" />
+    <style>
+        .file-input-box {
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            width: 150px;
+            /* กำหนดความกว้าง */
+            height: 150px;
+            /* กำหนดความสูง */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .file-input-box img {
+            max-width: 100%;
+            max-height: 100%;
+            /* กำหนดให้รูปภาพมีขนาดไม่เกินกล่อง */
+            display: none;
+        }
+    </style>
+
+
 </head>
 
 <body id="page-top">
@@ -47,76 +73,76 @@
                                     ข้อมูลส่วนตัวของนักศึกษา
                                 </div>
                                 <div class="card-body">
-                                    <div class="row">
+                                    <div class="row ">
                                         <div class="col-md-4 mb-3">
                                             <label for="inputEmail4" class="form-label">รหัสนักศึกษา</label>
-                                            <input type="text" class="form-control" id="inputEmail4">
-                                        </div>
-                                        <div class="col-md-4 ">
-                                            <label for="inputPassword4" class="form-label">ชื่อสกุล</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-4 ">
-                                            <label for="inputPassword4" class="form-label">รูปนักศึกษา</label>
-                                            <input type="text" class="form-control " id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-6 mb-3">
+                                            <input type="text" class="form-control mb-3" id="inputEmail4">
                                             <label for="inputPassword4" class="form-label">รหัสประจำตัวประชาชน</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-6">
-                                            <label for="inputPassword4" class="form-label">กลุ่มเรียน</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-6 mb-3">
+                                            <input type="text" class="form-control mb-3" id="inputPassword4">
                                             <label for="inputPassword4" class="form-label">ชื่อสาขา</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4 ">
+                                            <label for="inputPassword4" class="form-label">ชื่อสกุล</label>
+                                            <input type="text" class="form-control mb-3" id="inputPassword4">
+                                            <label for="inputPassword4" class="form-label">กลุ่มเรียน</label>
+                                            <input type="text" class="form-control mb-3" id="inputPassword4">
                                             <label for="inputPassword4" class="form-label">เบอร์โทร</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
+                                        <div class="col-md-4  text-center">
+                                            <label for="formFile" class="form-label">รูปนักศึกษา</label>
+                                            <div class="file-input-box" id="fileInputBox">
+                                                <img id="previewImage" src="" alt="Preview">
+                                                <p id="uploadText">เลือกรูปภาพ</p>
+                                                <input type="file" id="fileInput" class="form-control-file d-none">
+                                            </div>
+                                            <div class="mt-3">
+                                                <a href="#" class="btn btn-danger btn-sm me-2 ">แนบไฟล์</a> <a href="#" class="btn btn-dark btn-sm">แก้ไข</a>
+                                            </div>
+                                        </div>
+
                                         <div class="col-md-4 mb-3">
                                             <label for="inputPassword4" class="form-label">อีเมลล์</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-4">
                                             <label for="inputPassword4" class="form-label">ชื่อเล่น</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <label for="inputPassword4" class="form-label">วัน/เดือน/ปีเกิด</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-2 mb-3">
+                                        <div class="col-md-3 mb-3">
                                             <label for="inputPassword4" class="form-label">อายุ</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">ปี</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">ศาสนา</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">โรคประจำตัว</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-2 mb-3">
+                                        <div class="col-md-3 mb-3">
                                             <label for="inputPassword4" class="form-label">บ้านเลขที่</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-2">
+                                        <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">ถนน</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">ตำบล</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-4">
+                                        <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">อำเภอ</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
@@ -132,7 +158,7 @@
                                             <label for="inputPassword4" class="form-label">ผู้เกี่ยวข้อง</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
-                                        <div class="col-md-6 mb-3">
+                                        <div class="col-md-4 mb-3">
                                             <label for="inputPassword4" class="form-label">เบอร์โทรผู้เกี่ยวข้อง</label>
                                             <input type="text" class="form-control" id="inputPassword4">
                                         </div>
@@ -202,7 +228,7 @@
                                     <div class="d-flex justify-content-between mb-3">
                                         <p>ข้อมูลด้านทักษะต่างๆ</p>
                                         <p></p>
-                                        <button type="button">print</button>
+                                        <button type="button" class="btn btn-primary btn-sm">print</button>
                                     </div>
 
                                     <table class="table mb-3">
@@ -266,70 +292,49 @@
 
                                         </tbody>
                                     </table>
+
                                     <p class="mb-3">ความสามารถพิเศษ</p>
-                                    <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
-                                        <div class="col">
-                                            <div class="p-3"><label for="inputEmail4" class="form-label">พิมดีด</label>
-                                                <input type="checkbox" id="inputEmail4">
+                                    <div class="row mb-3">
+                                        <div class="col-12 ">
+                                            <div class="p-4">
+                                                <label for="inputEmail4" class="form-label me-3">พิมดีด</label>
+                                                <input type="checkbox" class="me-2" id="inputEmail4">
+                                                <label for="inputPassword4" class="form-label me-2">ได้</label>
+                                                <input type="checkbox" class="me-2" id="inputPassword4">
+                                                <label for="inputPassword4" class="form-label me-2">ไม่ได้</label>
+                                                <input type="checkbox" id="inputPassword4" class="me-2">
+                                                <label for="inputPassword4" class="form-label me-2">ภาษาไทย</label>
+                                                <input type="text" id="inputPassword4" class="me-2">
+                                                <label for="inputPassword4" class="form-label me-2">ภาษาอังกฤษ</label>
+                                                <input type="text" id="inputPassword4">
                                             </div>
                                         </div>
-                                        <div class="col">
-                                            <div class="p-3"><label for="inputPassword4" class="form-label">ได้</label>
-                                                <input type="checkbox" id="inputPassword4">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="p-3"><label for="inputPassword4" class="form-label">ไม่ได้</label>
-                                                <input type="checkbox" id="inputPassword4">
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="p-3">
-                                                <div class="row">
-                                                    <p class="col-sm-8">ภาษาไทย</p>
-                                                    <input type="text" class="col-sm-4 form-control" id="inputPassword4">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="p-3">
-                                                <div class="row">
-                                                    <p class="col-sm-8">ภาษาอังกฤษ</p>
-                                                    <input type="text" class="col-sm-4 form-control" id="inputPassword4">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
+
                                     </div>
+                                    <div class="row">
+                                        <div class="col-auto ms-4">
+                                            <label for="inputPassword4" class="form-label">โปรแกรมคอมพิวเตอร์</label>
+                                        </div>
+                                        <div class="col-6">
+                                            <textarea class="form-control " id="exampleFormControlTextarea1" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
 
-                                    <div class="row ">
-                                       
 
-                                      
-                                        <div class="row md-5 mb-3">
-                                            <label for="inputPassword4" class=" form-label">โปรแกรมคอมพิวเตอร์</label>
-                                            <textarea class="form-control col-md-6" id="exampleFormControlTextarea1" rows="3"></textarea>
-                                        </div>
-                                        <div class="col-sm-3">
-                                            <label for="inputEmail4" class="form-label">ยากพาหนะ</label>
-                                            <input type="checkbox" id="inputEmail4">
-                                        </div>
-                                        <div class="col-sm-2">
-                                            <label for="inputPassword4" class="form-label">รถยนต์</label>
-                                            <input type="checkbox" id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword4" class="form-label">รถจักรยานยนต์</label>
-                                            <input type="checkbox" id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-2">
-                                            <label for="inputPassword4" class="form-label">มี</label>
-                                            <input type="checkbox" id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-2">
-                                            <label for="inputPassword4" class="form-label">ไม่มี</label>
-                                            <input type="checkbox" id="inputPassword4">
-                                        </div>
+
+                                <div class="row mt-3">
+                                    <div class="col-12 ">
+                                        <label for="inputEmail4" class="form-label ms-4 me-2">ยานพาหนะ</label>
+                                        <input type="checkbox" class="me-2" id="inputEmail4">
+                                        <label for="inputPassword4" class="form-label me-2">รถยนต์</label>
+                                        <input type="checkbox" class="me-2" id="inputPassword4">
+                                        <label for="inputPassword4" class="form-label me-2">รถจักรยานยนต์</label>
+                                        <input type="checkbox" class="me-2" id="inputPassword4">
+                                        <label for="inputPassword4" class="form-label me-2">มี</label>
+                                        <input type="checkbox" class="me-2" id="inputPassword4">
+                                        <label for="inputPassword4" class="form-label me-2">ไม่มี</label>
+                                        <input type="checkbox" id="inputPassword4">
                                     </div>
                                 </div>
                             </div>
@@ -366,7 +371,29 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
+    <script>
+        const fileInput = document.getElementById('fileInput');
+        const fileInputBox = document.getElementById('fileInputBox');
+        const previewImage = document.getElementById('previewImage');
+        const uploadText = document.getElementById('uploadText');
 
+        fileInputBox.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                    uploadText.style.display = 'none'; // ซ่อนข้อความเมื่อรูปภาพถูกอัพโหลด
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 
 
     <!-- Bootstrap core JavaScript-->
