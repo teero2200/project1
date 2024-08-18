@@ -3863,7 +3863,7 @@ input[type="submit"].btn-block {
   list-style: none;
 }
 .navbar-nav .nav-link {
-  padding-right: 0;
+  padding-right: 10;
   padding-left: 0;
 }
 .navbar-nav .dropdown-menu {
@@ -9113,7 +9113,7 @@ a:focus {
 }
 .bg-gradient-primary {
   background-color: #fff;
- 
+
   background-size: cover;
 }
 .bg-gradient-secondary {
@@ -9631,8 +9631,8 @@ a:focus {
   .sidebar .nav-item .nav-link {
     display: block;
     width: 100%;
-    text-align: left;
-    padding: 1rem;
+    text-align: end;
+    padding: 0.5rem;
     width: 16rem;
   }
   .sidebar .nav-item .nav-link i {
@@ -10329,10 +10329,13 @@ p {
   margin-bottom: auto;
 }
 .form-select {
-  --bs-form-select-bg-img: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e);
+  --bs-form-select-bg-img: url(
+    data:image/svg + xml,
+    %3csvgxmlns="http://www.w3.org/2000/svg"viewBox="0 0 16 16"%3e%3cpathfill="none"stroke="%23343a40"stroke-linecap="round"stroke-linejoin="round"stroke-width="2"d="m2 5 6 6 6-6"/%3e%3c/svg%3e
+  );
   display: block;
   width: 100%;
-  padding: .375rem 2.25rem .375rem .75rem;
+  padding: 0.375rem 2.25rem 0.375rem 0.75rem;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -10341,11 +10344,12 @@ p {
   -moz-appearance: none;
   appearance: none;
   background-color: var(--bs-body-bg);
-  background-image: var(--bs-form-select-bg-img), var(--bs-form-select-bg-icon, none);
+  background-image: var(--bs-form-select-bg-img),
+    var(--bs-form-select-bg-icon, none);
   background-repeat: no-repeat;
-  background-position: right .75rem center;
+  background-position: right 0.75rem center;
   background-size: 16px 12px;
   border: var(--bs-border-width) solid var(--bs-border-color);
   border-radius: var(--bs-border-radius);
-  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }

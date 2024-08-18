@@ -10,7 +10,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
- :root {
+:root {
   --blue: #4e73df;
   --indigo: #6610f2;
   --purple: #6f42c1;
@@ -10948,7 +10948,10 @@ a:focus {
 @media (min-width: 768px) {
   .sidebar {
     width: 14rem !important;
+   
+ 
   }
+ 
   .sidebar .nav-item .collapse {
     position: relative;
     left: 0;
@@ -11742,4 +11745,3 @@ footer.sticky-footer .copyright {
 body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
-
