@@ -40,7 +40,7 @@
                     <!-- Page Heading -->
                     <div class="text-center mb-5">
                         <h3 class="text-dark">
-                            <a class="border border link-underline-light   text-dark p-2">รายงานนักศึกษาที่ยังได้รับการอนุมัติ</a>
+                            <a class="border border link-underline-light   text-dark p-2">รายงานขออนุมัติของนักศึกษา</a>
                         </h3>
                     </div>
                     <table class="table">
@@ -52,9 +52,6 @@
                                 <th scope="col" width="10%">ชื่อ-สกุล</th>
                                 <th scope="col" width="10%">เบอร์โทร</th>
                                 <th scope="col" width="8%">อีเมลล์</th>
-                                <th scope="col" width="10%">กลุ่มเรียน</th>
-                                <th scope="col" width="15%">รูปนักศึกษา</th>
-                                <th scope="col" width="25%"></th>
                             </tr>
                         </thead>
                         <tbody>
@@ -65,35 +62,13 @@
                                 <td>xxxxx</td>
                                 <td>xxxxx</td>
                                 <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td><a href="approve_or_not_approve.php" class="btn btn-warning btn-sm">ตรวจสอบ</a></td>
                             </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td><a href="#" class="btn btn-warning btn-sm">ตรวจสอบ</a></td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td>xxxxx</td>
-                                <td><a href="#" class="btn btn-warning btn-sm">ตรวจสอบ</a></td>
-                            </tr>
-
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center ">
+                        <a href="#" class="btn btn-danger btn-sm me-3">อนุมัติ</a>
+                        <a href="#" class="btn btn-secondary btn-sm">ไม่อนุมัติ</a>
+                    </div>
                 </div>
             </div>
         </div>
