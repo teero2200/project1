@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include_once('../../../database/connect.php');
 $id = $_GET['id'];
 $sql = "SELECT * FROM users WHERE id = $id";

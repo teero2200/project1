@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php
 include('../../../database/connect.php');
 $sql = "SELECT * FROM major";
@@ -50,18 +51,13 @@ $name = $_GET['name'] ?? NULL;
                         <p class="text-dark">ข้อมูลสาขา</ย>
                     </div>
                     <form action="../../../backend/major/search.php" method="post">
-                        <div class="row g-3 align-items-center justify-content-between">
-
-                            <div class="col-auto">
+                        <div class="row">
+                            <div class="col-md-6 ">
                                 <label for="inputmajor" class="col-form-label">รหัสสาขา</label>
-                            </div>
-                            <div class="col-auto">
                                 <input type="text" id="inputmajor" class="form-control">
                             </div>
-                            <div class="col-auto">
+                            <div class="col-md-6 ">
                                 <label for="inputmajor" class="col-form-label">ชื่อสาขาของคณะวิทยาการจัดการ</label>
-                            </div>
-                            <div class="col-md-4">
                                 <select name="id" class="form-select" aria-label="Default select exampled">
                                     <?php while ($row = $result->fetch_assoc()) { ?>
                                         <option value="<?= $row['MAJOR_ID'] ?>"><?= $row['MAJOR_NAME'] ?></option>
@@ -69,6 +65,8 @@ $name = $_GET['name'] ?? NULL;
                                 </select>
                             </div>
                         </div>
+
+
 
                         <div class="d-flex align-items-end flex-column mb-auto " style="height: 200px;">
                             <div class="p-2">01 วิชาเอกการจัดการทั่วไป</div>
@@ -94,48 +92,6 @@ $name = $_GET['name'] ?? NULL;
                         </div>
 
                     </form>
-
-                    <?php if (isset($name)) { ?>
-                        <table class="table">
-                            <thead class="table-dark">
-                                <tr>
-                                    <th scope="col">ลำดับ</th>
-                                    <th scope="col">หัวข้อข่าวสาร</th>
-                                    <th scope="col">วันที่</th>
-                                    <th scope="col">ดำเนินการ</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php
-                                include('../../../database/connect.php');
-                                $sql = "SELECT * FROM news";
-                                $result = $objCon->query($sql);
-                                if ($result->num_rows > 0) {
-                                    while ($row = $result->fetch_assoc()) {
-                                ?>
-                                        <tr>
-                                            <td><?= $row['N_ID'] ?></td>
-                                            <td><?= $row['N_NAME'] ?></td>
-                                            <td>
-                                                <?=  $row['N_DATE'] ?></td>
-                                            <td>
-                                                <a href="edit.php?id=<?= $row['N_ID'] ?>"><button type="button" class="btn btn-warning">แก้ไข</button></a>
-                                                <a href="../../../backend/new/delete.php?id=<?= $row['N_ID'] ?>"><button type="button" class="btn btn-danger">ลบ</button></a>
-                                            </td>
-                                        </tr>
-
-                                    <?php } ?>
-                                <?php
-                                } else {
-                                    echo "0 results";
-                                }
-
-                                $objCon->close();
-
-                                ?>
-                            </tbody>
-                        </table>
-                    <?php } ?>
 
                 </div>
 

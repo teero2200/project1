@@ -1,67 +1,54 @@
-<?php
-session_start();
-
-
-?>
-
-
-
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
     <!-- Nav Item - Dashboard -->
-    <div class="mt-5 ">
+    <div class="mt-5 text-center">
 
-
-        <!-- ไม่มีตำแหน่ง -->
-        <?php if (empty($_SESSION['role'])) { ?>
-            <li class="nav-item text-center">
-                <a class="nav-link text-dark " href="home.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน้าแรก</span></a>
+        <?php if (empty($_SESSION['role'] ?? '')) : ?>
+            <!-- ไม่มีตำแหน่ง -->
+            <li class="nav-link nav-item">
+                <a class=" text-dark" href="home.php">
+                    <span>หน้าแรก</span></a>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="login.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เข้าสู่ระบบ</span></a>
+            <li class="nav-link nav-item">
+                <a class=" text-dark" href="login.php">
+                    <span>เข้าสู่ระบบ</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="chage_password.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เปลี่ยนรหัสผ่าน</span></a>
+            <li class="nav-link nav-item">
+                <a class=" text-dark" href="chage_password.php">
+                    <span>เปลี่ยนรหัสผ่าน</span></a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link text-dark" href="forget_password.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ลืมรหัสผ่าน</span></a>
+            <li class="nav-link nav-item">
+                <a class=" text-dark" href="forget_password.php">
+                    <span>ลืมรหัสผ่าน</span></a>
             </li>
-
-
             <!-- ตำแหน่ง Admin -->
-        <?php
-        } elseif ($_SESSION['role'] == 'admin') { ?>
+        <?php elseif ($_SESSION['role']   == 'admin'): ?>
             <li class="nav-item text-center">
                 <a class="nav-link text-dark " href="/project1/frontend/home.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน้าแรก</span></a>
+                    <span>หน้าแรก</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/admins/new/index.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข่าวสาร</span></a>
+                    <span>ข่าวสาร</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/admins/major/major.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลสาขา</span></a>
+                    <span>ข้อมูลสาขา</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/admins/teachers/index.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลส่วนตัวของอาจารย์</span></a>
+                    <span>ข้อมูลส่วนตัวของอาจารย์</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/admins/student.php">
-                    <span>&nbsp;&nbsp;&nbsp;ค้นหานักศักษา เพื่อแก้ไขข้อมูล</span></a>
+                    <span>ค้นหานักศักษา เพื่อแก้ไขข้อมูล</span></a>
             </li>
 
 
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/admins/train.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;แก้ไขหลักสูตรการฝึกงาน</span></a>
+                    <span>แก้ไขหลักสูตรการฝึกงาน</span></a>
                 <a class="nav-link text-dark" href="/project1/frontend/admins/profession.php">
-                    <span>&nbsp;&nbsp;หลักสูตรการฝึกประสบการณ์วิชาชีพ</span></a>
+                    <span>หลักสูตรการฝึกประสบการณ์วิชาชีพ</span></a>
                 <a class="nav-link text-dark" href="/project1/frontend/admins/field.php">
                     <span>หลักสูตรการฝึกประสบการณ์วิชาชีพภาคสนาม</span></a>
             </li>
@@ -70,37 +57,34 @@ session_start();
 
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/admins/experience.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;รายงานการฝึกประสบการณ์</span></a>
+                    <span>รายงานการฝึกประสบการณ์</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/../project1/backend/logout.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ออกจากระบบ</span></a>
+                    <span>ออกจากระบบ</span></a>
             </li>
-
-
-
+        <?php elseif (($_SESSION['role']  == 'teacher')) : ?>
             <!-- ตำแหน่ง Teacher -->
-        <?php } elseif ($_SESSION['role'] == 'teacher') { ?>
             <li class="nav-item text-center">
                 <a class="nav-link text-dark " href="/project1/frontend/home.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน้าแรก</span></a>
+                    <span>หน้าแรก</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/teachers/profession.php">
-                    <span>&nbsp;&nbsp;&nbsp;เกณฑ์การฝึกประสบการวิชาชีพ</span></a>
+                    <span>เกณฑ์การฝึกประสบการวิชาชีพ</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/teachers/field.php">
-                    <span>&nbsp;เกณฑ์การฝึกประสบการภาคสนาม</span></a>
+                    <span>เกณฑ์การฝึกประสบการภาคสนาม</span></a>
             </li>
 
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/teachers/approve.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ขออนุมัติฝึกประสบการณ์</span></a>
+                    <span>ขออนุมัติฝึกประสบการณ์</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/teachers/profession_report.php">
-                    <span>&nbsp;รายงานการฝึกประสบการณ์วิชาชีพ</span></a>
+                    <span>รายงานการฝึกประสบการณ์วิชาชีพ</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/teachers/field_report.php">
@@ -112,11 +96,11 @@ session_start();
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/teachers/approve_report.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;รายงานนักศึกษาที่รับอนุมัติ</span></a>
+                    <span>รายงานนักศึกษาที่รับอนุมัติ</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/teachers/time_report.php">
-                    <span>&nbsp;&nbsp;รายงานระยะเวลาที่นักศึกษาฝึกงาน</span></a>
+                    <span>รายงานระยะเวลาที่นักศึกษาฝึกงาน</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/teachers/time_year_report.php">
@@ -124,47 +108,47 @@ session_start();
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/../project1/backend/logout.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ออกจากระบบ</span></a>
+                    <span>ออกจากระบบ</span></a>
             </li>
 
-
+        <?php elseif (($_SESSION['role']  == 'student')) : ?>
             <!-- ตำแหน่ง Student -->
-        <?php } elseif ($_SESSION['role'] == 'student') { ?>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/students/creat.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้อมูลส่วนตัวของนักศึกษา</span></a>
+                    <span>ข้อมูลส่วนตัวของนักศึกษา</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/students/select.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เลือกหลักสูตร</span></a>
+                    <span>เลือกหลักสูตร</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/students/profession.php">
-                    <span>&nbsp;&nbsp;-คำร้องขอฝึกประสบการณ์วิชาชีพ</span></a>
+                    <span>-คำร้องขอฝึกประสบการณ์วิชาชีพ</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/students/field.php">
-                    <span>&nbsp;&nbsp;-คำร้องขอฝึกประสบการณ์ภาคสนาม</span></a>
+                    <span>-คำร้องขอฝึกประสบการณ์ภาคสนาม</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/students/approve.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ตรวจสอบสถานะการอนุมัติ</span></a>
+                    <span>ตรวจสอบสถานะการอนุมัติ</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/students/no_approve.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ไม่อนุมัติ</span></a>
+                    <span>ไม่อนุมัติ</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/project1/frontend/students/undo.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดูข้อมูลย้อนหลัง</span></a>
+                    <span>ดูข้อมูลย้อนหลัง</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link text-dark" href="/../project1/backend/logout.php">
-                    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ออกจากระบบ</span></a>
+                    <span>ออกจากระบบ</span></a>
             </li>
-        <?php } ?>
+        <?php endif; ?>
 
 
 
     </div>
 </ul>
+<?php

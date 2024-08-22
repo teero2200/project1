@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -69,7 +70,7 @@
                       <?php
                       $date = date_create($row['N_DATE']);
                       echo date_format($date, 'd-m-');
-                      echo date_format($date, 'Y')+543;
+                      echo date_format($date, 'Y') + 543;
                       ?>
                     </td>
                     <td>
