@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 07, 2024 at 05:21 PM
+-- Generation Time: Aug 26, 2024 at 03:10 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -24,22 +24,51 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `fm01`
+-- Table structure for table `fm1`
 --
 
-CREATE TABLE `fm01` (
+CREATE TABLE `fm1` (
   `FM01_ID` int(11) NOT NULL,
-  `TC_ID` varchar(13) NOT NULL,
-  `ST_ID` varchar(13) NOT NULL,
-  `FMLN_ID` int(11) NOT NULL,
-  `FM01_RD` date NOT NULL DEFAULT current_timestamp(),
-  `FM01_TD` date NOT NULL DEFAULT current_timestamp(),
-  `FM01_DP` varchar(50) NOT NULL,
-  `FM01_STATUS` varchar(50) NOT NULL,
-  `FM01_NOTE` text NOT NULL,
-  `FM01_MAJOR` varchar(50) NOT NULL,
-  `FM01_JD` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+  `id_user` int(11) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
+  `FMLN_ID` int(11) DEFAULT NULL,
+  `FM01_RD` date DEFAULT NULL,
+  `FM01_TD` date DEFAULT NULL,
+  `FM01_DP` varchar(255) DEFAULT NULL,
+  `FM01_STATUS` varchar(255) DEFAULT NULL,
+  `FM01_NOTE` varchar(255) DEFAULT NULL,
+  `FM01_MAJOR` varchar(255) DEFAULT NULL,
+  `FM01_JD` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `fm1`
+--
+
+INSERT INTO `fm1` (`FM01_ID`, `id_user`, `role`, `FMLN_ID`, `FM01_RD`, `FM01_TD`, `FM01_DP`, `FM01_STATUS`, `FM01_NOTE`, `FM01_MAJOR`, `FM01_JD`) VALUES
+(6, 7, 'student', 0, '2020-03-22', '2020-03-23', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(7, 7, 'student', NULL, '2020-03-23', '2020-03-24', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(8, 7, 'student', NULL, '2020-03-24', '2020-03-25', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(9, 7, 'student', 48, '2020-03-25', '2020-03-26', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(10, 7, 'student', 49, '2020-03-26', '2020-03-27', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(11, 7, 'student', 50, '2021-03-26', '2020-03-28', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(12, 7, 'student', 51, '2022-03-26', '2022-03-27', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(13, 7, 'student', 52, '2022-03-27', '2022-03-28', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(14, 7, 'student', 53, '2022-03-28', '2022-03-29', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(15, 7, 'student', 54, '2022-03-29', '2022-03-30', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(16, 7, 'student', 55, '2022-03-30', '2022-04-02', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(17, 7, 'student', 56, '2022-03-31', '2022-04-03', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(18, 7, 'student', 57, '2023-03-31', '2023-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(19, 7, 'student', 58, '2024-03-31', '2024-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(20, 7, 'student', 59, '2022-04-03', '2025-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(21, 7, 'student', 60, '2022-04-04', '2026-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(22, 7, 'student', 61, '2022-04-05', '2027-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(23, 7, 'student', 62, '2022-04-06', '2028-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(24, 7, 'student', 63, '2022-04-07', '2029-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(25, 7, 'student', 64, '2023-04-07', '2030-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(26, 7, 'student', 65, '2024-04-07', '2031-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(27, 7, 'student', 66, '2025-04-07', '2032-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ'),
+(28, 7, 'student', 67, '2022-04-11', '2033-04-04', 'อาจารย์ที่ปรึกษา', 'รอดำเนินการ', 'ไม่รู้', 'วิทย์-คอม', 'ขายบริการ');
 
 -- --------------------------------------------------------
 
@@ -61,6 +90,80 @@ CREATE TABLE `fm_location` (
   `FMLN_PN` varchar(10) NOT NULL,
   `FMLN_EMAIL` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `fm_location`
+--
+
+INSERT INTO `fm_location` (`FMLN_ID`, `FMLN_NAME`, `FMLN_ADDRESS`, `FMLN_MOO`, `FMLN_ROAD`, `FMLN_SD`, `FMLN_PROVINCE`, `FMLN_ZC`, `FMLN_NUMBER`, `FMLN_FAX`, `FMLN_PN`, `FMLN_EMAIL`) VALUES
+(1, 'ewqeqe', 'qeeqwe', '', '', '', '', '', 'wqeqe', 'qweqe', '', 'wewqe@sfsfsdf.com'),
+(2, 'asdda', 'asdad', '', '', '', '', '', '0635965816', '1213213', '', '123213@fds.com'),
+(3, 'sadds', 'sadd', '', '', '', '', '', 'asdsad', 'adasd', '', 'asdad@sfdsf.com'),
+(4, 'sadds', 'sadd', '', '', '', '', '', 'asdsad', 'adasd', '', 'asdad@sfdsf.com'),
+(5, 'sadds', 'sadd', '', '', '', '', '', 'asdsad', 'adasd', '', 'asdad@sfdsf.com'),
+(6, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
+(7, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
+(8, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
+(9, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
+(10, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
+(24, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
+(25, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
+(27, 'หีไม่เคยเหม็น', 'อาจารย์ควย', '', '', '', '', '', '0635965816', 'adad', '', 'asds@sdf.com'),
+(28, 'หีไม่เคยเหม็น', 'อาจารย์ควย', '', '', '', '', '', '0635965816', 'adad', '', 'asds@sdf.com'),
+(29, 'หีไม่เคยเหม็น', 'อาจารย์ควย', '', '', '', '', '', '0635965816', 'adad', '', 'asds@sdf.com'),
+(30, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(31, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(32, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(33, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(34, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(42, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(43, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(46, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(47, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(48, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
+(49, 'saadada', 'dadsada', '', '', '', '', '', 'dadsad', 'dsadsad', '', 'asdsadsada@sdfsf.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `fm_location_log`
+--
+
+CREATE TABLE `fm_location_log` (
+  `FMLN_ID` int(11) NOT NULL,
+  `FMLN_NAME` varchar(35) NOT NULL,
+  `FMLN_ADDRESS` varchar(10) NOT NULL,
+  `FMLN_MOO` varchar(3) NOT NULL,
+  `FMLN_ROAD` varchar(25) NOT NULL,
+  `FMLN_SD` varchar(25) NOT NULL,
+  `FMLN_PROVINCE` varchar(35) NOT NULL,
+  `FMLN_ZC` varchar(5) NOT NULL,
+  `FMLN_NUMBER` varchar(10) NOT NULL,
+  `FMLN_FAX` varchar(10) NOT NULL,
+  `FMLN_PN` varchar(10) NOT NULL,
+  `FMLN_EMAIL` varchar(35) NOT NULL,
+  `update` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+--
+-- Dumping data for table `fm_location_log`
+--
+
+INSERT INTO `fm_location_log` (`FMLN_ID`, `FMLN_NAME`, `FMLN_ADDRESS`, `FMLN_MOO`, `FMLN_ROAD`, `FMLN_SD`, `FMLN_PROVINCE`, `FMLN_ZC`, `FMLN_NUMBER`, `FMLN_FAX`, `FMLN_PN`, `FMLN_EMAIL`, `update`) VALUES
+(1, 'หีไม่เคยเหม็น', 'อาจารย์ควย', '', '', '', '', '', '0635965816', 'adad', '', 'asds@sdf.com', '2024-08-22 10:06:07'),
+(2, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:07'),
+(3, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:07'),
+(4, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:16'),
+(5, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:16'),
+(6, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:47'),
+(14, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:25:41'),
+(15, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:25:41'),
+(16, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:32:08'),
+(17, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:32:08'),
+(18, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:33:06'),
+(19, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:33:06'),
+(20, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:36:55'),
+(21, 'saadada', 'dadsada', '', '', '', '', '', 'dadsad', 'dsadsad', '', 'asdsadsada@sdfsf.com', '2024-08-25 15:24:06');
 
 -- --------------------------------------------------------
 
@@ -91,9 +194,7 @@ INSERT INTO `major` (`MAJOR_ID`, `MAJOR_NAME`, `MAJOR_COURSETYPE`) VALUES
 
 CREATE TABLE `news` (
   `N_ID` int(11) NOT NULL,
-  `N_NAME` varchar(35) DEFAULT NULL,
-  `N_DETAILS` text DEFAULT NULL,
-  `N_FD` blob DEFAULT NULL,
+  `N_NAME` varchar(100) DEFAULT NULL,
   `N_DATE` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
@@ -101,8 +202,62 @@ CREATE TABLE `news` (
 -- Dumping data for table `news`
 --
 
-INSERT INTO `news` (`N_ID`, `N_NAME`, `N_DETAILS`, `N_FD`, `N_DATE`) VALUES
-(69, 'ข่าวบอบู๋', 'ที่โรงอาหาร', NULL, '2024-08-06 02:53:16');
+INSERT INTO `news` (`N_ID`, `N_NAME`, `N_DATE`) VALUES
+(1, 'aaaaaaaadsadsadasdadsadsadsa', '2024-08-22 13:06:06'),
+(2, 'aaaaaaaadsadsadasdadsadsadsa', '2024-08-22 13:06:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `students`
+--
+
+CREATE TABLE `students` (
+  `id` int(11) NOT NULL,
+  `ST_ID` varchar(13) NOT NULL,
+  `MAJOR_ID` int(11) DEFAULT NULL,
+  `ST_NAME` varchar(30) DEFAULT NULL,
+  `ST_PASSWORD` text DEFAULT NULL,
+  `ST_ID_CN` varchar(13) DEFAULT NULL,
+  `ST_PN` varchar(10) DEFAULT NULL,
+  `ST_EMAIL` varchar(30) DEFAULT NULL,
+  `ST_SG` varchar(9) DEFAULT NULL,
+  `ST_IMAGE` blob DEFAULT NULL,
+  `ST_NICKNAME` varchar(10) DEFAULT NULL,
+  `ST_DATE` date DEFAULT NULL,
+  `ST_AGE` int(2) DEFAULT NULL,
+  `ST_RELIGION` varchar(10) DEFAULT NULL,
+  `ST_CD` varchar(40) DEFAULT NULL,
+  `ST_ADDRESS` varchar(25) DEFAULT NULL,
+  `ST_SD` varchar(10) DEFAULT NULL,
+  `ST_PROVINCE` varchar(20) DEFAULT NULL,
+  `ST_ZC` varchar(5) DEFAULT NULL,
+  `ST_CP` varchar(30) DEFAULT NULL,
+  `ST_CNPN` varchar(10) DEFAULT NULL,
+  `ST_EDUCNAME` varchar(20) DEFAULT NULL,
+  `ST_EDUCEL` varchar(30) DEFAULT NULL,
+  `ST_EF` varchar(30) DEFAULT NULL,
+  `ST_EDUC_MAJOR` varchar(20) DEFAULT NULL,
+  `ST_EDUCSM` varchar(30) DEFAULT NULL,
+  `ST_EDUCGPA` varchar(4) DEFAULT NULL,
+  `ST_EDUCA` varchar(30) DEFAULT NULL,
+  `ST_EDUCPN` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `students`
+--
+
+INSERT INTO `students` (`id`, `ST_ID`, `MAJOR_ID`, `ST_NAME`, `ST_PASSWORD`, `ST_ID_CN`, `ST_PN`, `ST_EMAIL`, `ST_SG`, `ST_IMAGE`, `ST_NICKNAME`, `ST_DATE`, `ST_AGE`, `ST_RELIGION`, `ST_CD`, `ST_ADDRESS`, `ST_SD`, `ST_PROVINCE`, `ST_ZC`, `ST_CP`, `ST_CNPN`, `ST_EDUCNAME`, `ST_EDUCEL`, `ST_EF`, `ST_EDUC_MAJOR`, `ST_EDUCSM`, `ST_EDUCGPA`, `ST_EDUCA`, `ST_EDUCPN`) VALUES
+(1, '1', 0, '[value-3]', '[value-4]', '[value-5]', '[value-6]', '[value-7]', '[value-8]', 0x5b76616c75652d395d, '[value-10]', '0000-00-00', 0, '[value-13]', '[value-14]', '[value-15]', '[value-16]', '[value-17]', '[valu', '[value-19]', '[value-20]', '[value-21]', '[value-22]', '[value-23]', '[value-24]', '[value-25]', '[val', '[value-27]', '[value-28]'),
+(2, '2', 0, '[value-3]', '[value-4]', '[value-5]', '[value-6]', '[value-7]', '[value-8]', 0x5b76616c75652d395d, '[value-10]', '0000-00-00', 0, '[value-13]', '[value-14]', '[value-15]', '[value-16]', '[value-17]', '[valu', '[value-19]', '[value-20]', '[value-21]', '[value-22]', '[value-23]', '[value-24]', '[value-25]', '[val', '[value-27]', '[value-28]'),
+(3, '3', 0, '[value-3]', '[value-4]', '[value-5]', '[value-6]', '[value-7]', '[value-8]', 0x5b76616c75652d395d, '[value-10]', '0000-00-00', 0, '[value-13]', '[value-14]', '[value-15]', '[value-16]', '[value-17]', '[valu', '[value-19]', '[value-20]', '[value-21]', '[value-22]', '[value-23]', '[value-24]', '[value-25]', '[val', '[value-27]', '[value-28]'),
+(4, '4', 0, '[value-3]', '[value-4]', '[value-5]', '[value-6]', '[value-7]', '[value-8]', 0x5b76616c75652d395d, '[value-10]', '0000-00-00', 0, '[value-13]', '[value-14]', '[value-15]', '[value-16]', '[value-17]', '[valu', '[value-19]', '[value-20]', '[value-21]', '[value-22]', '[value-23]', '[value-24]', '[value-25]', '[val', '[value-27]', '[value-28]'),
+(5, '5', 0, '[value-3]', '[value-4]', '[value-5]', '[value-6]', '[value-7]', '[value-8]', 0x5b76616c75652d395d, '[value-10]', '0000-00-00', 0, '[value-13]', '[value-14]', '[value-15]', '[value-16]', '[value-17]', '[valu', '[value-19]', '[value-20]', '[value-21]', '[value-22]', '[value-23]', '[value-24]', '[value-25]', '[val', '[value-27]', '[value-28]'),
+(6, '3', 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, '3', 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, '3', 0, '', '', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, '3', 0, 'student_Tawan', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -135,48 +290,48 @@ INSERT INTO `tblusers` (`ID`, `FirstName`, `LastName`, `MobileNumber`, `Email`, 
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `ID_CN` varchar(13) DEFAULT NULL,
   `ID_IDEN` varchar(100) DEFAULT NULL COMMENT 'รหัสประจำตัว',
-  `name` varchar(30) NOT NULL,
-  `email` varchar(100) NOT NULL,
+  `name` varchar(30) NOT NULL COMMENT 'ชื่อ-สกุล',
+  `ID_CN` varchar(13) DEFAULT NULL,
+  `SG` varchar(9) DEFAULT NULL COMMENT 'กลุ่มเรียน',
+  `EDUC_MAJOR` varchar(20) DEFAULT NULL COMMENT 'สาขาวิชา',
+  `PN` varchar(10) DEFAULT NULL COMMENT 'เบอร์โทร',
+  `email` varchar(100) NOT NULL COMMENT 'อีเมลล์',
+  `NICKNAME` varchar(10) DEFAULT NULL COMMENT 'ชื่อเล่น',
+  `DATE` date DEFAULT NULL COMMENT 'วันเกิด',
+  `AGE` int(3) DEFAULT NULL COMMENT 'อายุ',
+  `RELIGION` varchar(10) DEFAULT NULL COMMENT 'ศาสนา',
+  `CD` varchar(40) DEFAULT NULL COMMENT 'รหัสบัตรประชาชน',
+  `ADDRESS` varchar(100) DEFAULT NULL COMMENT 'ที่อยู่',
+  `SD` varchar(5) DEFAULT NULL COMMENT 'อำเภอ',
+  `PROVINCE` varchar(20) DEFAULT NULL COMMENT 'จังหวัด',
+  `ZC` varchar(5) DEFAULT NULL COMMENT 'รหัสไปรสณีย์',
+  `CP` varchar(30) DEFAULT NULL COMMENT 'ผู้เกี่ยวข้อง',
+  `CNPN` varchar(10) DEFAULT NULL COMMENT 'เบอร์โทรศัพท์ผู้เกี่ยวข้อง',
+  `EDUCNAME` varchar(20) DEFAULT NULL COMMENT 'สถานศึกษา',
+  `EDUCEL` varchar(30) DEFAULT NULL COMMENT 'ระดับการศึกษา',
+  `EDUCSM` varchar(30) DEFAULT NULL COMMENT 'วิชาเอก',
+  `EDUCGPA` varchar(4) DEFAULT NULL COMMENT 'เกรดเฉลี่ยสะสม',
+  `EDUCA` varchar(30) DEFAULT NULL COMMENT 'อาจารย์ที่ปรึกษา',
+  `EDUCPN` varchar(10) DEFAULT NULL COMMENT 'เบอร์ติดต่อ',
   `password` text NOT NULL,
-  `id_major` int(11) DEFAULT NULL,
-  `number` varchar(10) NOT NULL,
-  `role` set('admin','teacher','student','') NOT NULL,
-  `PN` varchar(10) DEFAULT NULL,
-  `SG` varchar(9) DEFAULT NULL,
-  `IMAGE` blob DEFAULT NULL,
-  `NICKNAME` varchar(10) DEFAULT NULL,
-  `DATE` date DEFAULT NULL,
-  `AGE` int(11) DEFAULT NULL,
-  `RELIGION` varchar(10) DEFAULT NULL,
-  `CD` varchar(40) DEFAULT NULL,
-  `ADDRESS` varchar(25) DEFAULT NULL,
-  `SD` varchar(5) DEFAULT NULL,
-  `PROVINCE` varchar(20) DEFAULT NULL,
-  `ZC` varchar(5) DEFAULT NULL,
-  `CP` varchar(30) DEFAULT NULL,
-  `CNPN` varchar(10) DEFAULT NULL,
-  `EDUCNAME` varchar(20) DEFAULT NULL,
-  `EDUCEL` varchar(30) DEFAULT NULL,
-  `EDUC_MAJOR` varchar(20) DEFAULT NULL,
-  `EDUCSM` varchar(30) DEFAULT NULL,
-  `EDUCGPA` varchar(4) DEFAULT NULL,
-  `EDUCA` varchar(30) DEFAULT NULL,
-  `EDUCPN` varchar(10) DEFAULT NULL
+  `id_major` int(11) DEFAULT NULL COMMENT 'รหัสสาขา',
+  `number` varchar(10) NOT NULL COMMENT 'เบอร์โทร',
+  `role` set('admin','teacher','student','') NOT NULL COMMENT 'ตำแหน่ง',
+  `IMAGE` text DEFAULT NULL COMMENT 'รูป'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `ID_CN`, `ID_IDEN`, `name`, `email`, `password`, `id_major`, `number`, `role`, `PN`, `SG`, `IMAGE`, `NICKNAME`, `DATE`, `AGE`, `RELIGION`, `CD`, `ADDRESS`, `SD`, `PROVINCE`, `ZC`, `CP`, `CNPN`, `EDUCNAME`, `EDUCEL`, `EDUC_MAJOR`, `EDUCSM`, `EDUCGPA`, `EDUCA`, `EDUCPN`) VALUES
-(1, '1631010541137', '1631010541137', 'tee', 'teebin2019@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', ''),
-(3, '1631010531138', '1631010531138', 'arue', 'arue1@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'student', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', ''),
-(5, '1', '1', 'Tawan', 'Tawan@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(7, '3', '3', 'student_Tawan', 'Tawan2@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'student', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(8, '12345678901', '12345678901', 'ew', 'qwe@sfdsfs.com', '416f8f6e105370e7b9d0fd983141f00b613477f8', 1, '92131313', 'admin', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(15, NULL, '13456789', 'สวัสดีครับ ชาวโลก', 'Tawan1@gmail.com', '7c222fb2927d828af22f592134e8932480637c0d', 1, '0635965816', 'teacher', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+INSERT INTO `users` (`id`, `ID_IDEN`, `name`, `ID_CN`, `SG`, `EDUC_MAJOR`, `PN`, `email`, `NICKNAME`, `DATE`, `AGE`, `RELIGION`, `CD`, `ADDRESS`, `SD`, `PROVINCE`, `ZC`, `CP`, `CNPN`, `EDUCNAME`, `EDUCEL`, `EDUCSM`, `EDUCGPA`, `EDUCA`, `EDUCPN`, `password`, `id_major`, `number`, `role`, `IMAGE`) VALUES
+(1, '1631010541137', 'tee', '1631010541137', NULL, '', NULL, 'teebin2019@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'admin', NULL),
+(3, '1631010541120', 'ธีรภัทร ศรีทองกุล', '1631010531138', NULL, '', NULL, 'arue1@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'student', NULL),
+(5, '1', 'Tawan', '1', NULL, NULL, NULL, 'Tawan@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'admin', NULL),
+(7, '3', '1724662058.', '1849901481431', '1', 'วิศวกรรมคอมพิวเตอร์', '', 'teebin2019@gmail.com', 'ธีร์', '2001-03-06', 23, 'พุทธ', '', 'Address', '', 'สุราษฎร์ธานี', '84220', '0862717092', '', 'ราชฎัฐสุราษฎร์ธานี', 'ปี 1', 'คอม', '4.00', 'อาจารย์ณัฐ', '04577555', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'student', 'upload/1724662058.'),
+(8, '12345678901', 'ew', '12345678901', NULL, NULL, NULL, 'qwe@sfdsfs.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '416f8f6e105370e7b9d0fd983141f00b613477f8', 1, '92131313', 'admin', NULL),
+(15, '13456789', 'สวัสดีครับ ชาวโลก', NULL, NULL, NULL, NULL, 'Tawan1@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7c222fb2927d828af22f592134e8932480637c0d', 1, '0635965816', 'teacher', NULL);
 
 -- --------------------------------------------------------
 
@@ -209,15 +364,21 @@ CREATE TABLE `various_skills` (
 --
 
 --
--- Indexes for table `fm01`
+-- Indexes for table `fm1`
 --
-ALTER TABLE `fm01`
+ALTER TABLE `fm1`
   ADD PRIMARY KEY (`FM01_ID`);
 
 --
 -- Indexes for table `fm_location`
 --
 ALTER TABLE `fm_location`
+  ADD PRIMARY KEY (`FMLN_ID`);
+
+--
+-- Indexes for table `fm_location_log`
+--
+ALTER TABLE `fm_location_log`
   ADD PRIMARY KEY (`FMLN_ID`);
 
 --
@@ -231,6 +392,12 @@ ALTER TABLE `major`
 --
 ALTER TABLE `news`
   ADD PRIMARY KEY (`N_ID`);
+
+--
+-- Indexes for table `students`
+--
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `tblusers`
@@ -257,16 +424,22 @@ ALTER TABLE `various_skills`
 --
 
 --
--- AUTO_INCREMENT for table `fm01`
+-- AUTO_INCREMENT for table `fm1`
 --
-ALTER TABLE `fm01`
-  MODIFY `FM01_ID` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `fm1`
+  MODIFY `FM01_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `fm_location`
 --
 ALTER TABLE `fm_location`
-  MODIFY `FMLN_ID` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `FMLN_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+
+--
+-- AUTO_INCREMENT for table `fm_location_log`
+--
+ALTER TABLE `fm_location_log`
+  MODIFY `FMLN_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `major`
@@ -278,7 +451,13 @@ ALTER TABLE `major`
 -- AUTO_INCREMENT for table `news`
 --
 ALTER TABLE `news`
-  MODIFY `N_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=70;
+  MODIFY `N_ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `students`
+--
+ALTER TABLE `students`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
@@ -301,20 +480,6 @@ ALTER TABLE `various_skills`
 --
 -- Constraints for dumped tables
 --
-
---
--- Constraints for table `fm01`
---
-ALTER TABLE `fm01`
-  ADD CONSTRAINT `fm01_ibfk_1` FOREIGN KEY (`TC_ID`) REFERENCES `teacher` (`TC_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fm01_ibfk_2` FOREIGN KEY (`ST_ID`) REFERENCES `student` (`ST_ID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `fm01_ibfk_3` FOREIGN KEY (`FMLN_ID`) REFERENCES `fm_location` (`FMLN_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `news`
---
-ALTER TABLE `news`
-  ADD CONSTRAINT `news_ibfk_1` FOREIGN KEY (`AM_ID`) REFERENCES `admin` (`AM_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `various_skills`
