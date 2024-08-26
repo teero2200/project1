@@ -1,4 +1,14 @@
-<?php session_start(); ?>
+<?php
+session_start();
+include '../../database/connect.php';
+$id = $_SESSION['id'];
+$sql = "SELECT * FROM `users` where id = $id";
+$result = $objCon->query($sql);
+$row = $result->fetch_assoc();
+// print_r($row);
+// die;
+$objCon->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -67,7 +77,9 @@
                     <!-- Page Heading -->
 
                     <div class="container">
-                        <form action="">
+                        <form action="../../backend/db_student/update.php" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="7">
+
                             <!-- ข้อมูลส่วนตัวของนักศึกษา -->
                             <div class="card mb-3">
                                 <div class="card-header text-center">
@@ -77,26 +89,26 @@
                                     <div class="row ">
                                         <div class="col-md-4 mb-3">
                                             <label for="inputEmail4" class="form-label">รหัสนักศึกษา</label>
-                                            <input type="text" class="form-control mb-3" id="inputEmail4">
+                                            <input type="text" class="form-control mb-3" id="inputEmail4" value="<?= $row['ID_IDEN'] ?? 'emtry' ?>" name="ID_IDEN">
                                             <label for="inputPassword4" class="form-label">รหัสประจำตัวประชาชน</label>
-                                            <input type="text" class="form-control mb-3" id="inputPassword4">
+                                            <input type="text" class="form-control mb-3" id="inputPassword4" value="<?= $row['ID_CN'] ?? 'emtry' ?>" name="ID_CN">
                                             <label for="inputPassword4" class="form-label">ชื่อสาขา</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['EDUC_MAJOR'] ?? 'ว่าง' ?>" name="EDUC_MAJOR">
                                         </div>
                                         <div class="col-md-4 ">
                                             <label for="inputPassword4" class="form-label">ชื่อสกุล</label>
-                                            <input type="text" class="form-control mb-3" id="inputPassword4">
+                                            <input type="text" class="form-control mb-3" id="inputPassword4" value="<?= $row['name'] ?>" name="name">
                                             <label for="inputPassword4" class="form-label">กลุ่มเรียน</label>
-                                            <input type="text" class="form-control mb-3" id="inputPassword4">
+                                            <input type="text" class="form-control mb-3" id="inputPassword4" value="<?= $row['SG'] ?>" name="SG">
                                             <label for="inputPassword4" class="form-label">เบอร์โทร</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['PN'] ?>" name="PN">
                                         </div>
                                         <div class="col-md-4  text-center">
                                             <label for="formFile" class="form-label">รูปนักศึกษา</label>
                                             <div class="file-input-box" id="fileInputBox">
                                                 <img id="previewImage" src="" alt="Preview">
                                                 <p id="uploadText">เลือกรูปภาพ</p>
-                                                <input type="file" id="fileInput" class="form-control-file d-none">
+                                                <input type="file" id="fileInput" value=" ../../backend/db_student/<?= $row['IMAGE'] ?>" class="form-control-file d-none" name="IMAGE">
                                             </div>
                                             <div class="mt-3">
                                                 <a href="#" class="btn btn-danger btn-sm me-2 ">แนบไฟล์</a> <a href="#" class="btn btn-dark btn-sm">แก้ไข</a>
@@ -105,63 +117,62 @@
 
                                         <div class="col-md-4 mb-3">
                                             <label for="inputPassword4" class="form-label">อีเมลล์</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['email'] ?>" name="email">
                                         </div>
                                         <div class="col-md-4">
                                             <label for="inputPassword4" class="form-label">ชื่อเล่น</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['NICKNAME'] ?>" name="NICKNAME">
                                         </div>
                                         <div class="col-md-4">
                                             <label for="inputPassword4" class="form-label">วัน/เดือน/ปีเกิด</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['DATE'] ?>" name="DATE">
                                         </div>
-                                        <div class="col-md-3 mb-3">
+                                        <div class="col-md-3 test-center mb-3">
                                             <label for="inputPassword4" class="form-label">อายุ</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-3">
-                                            <label for="inputPassword4" class="form-label">ปี</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <div class="row">
+                                                <input type="text" class="form-control ms-2 col-sm-6 " id="inputPassword4" value="23" name="AGE">
+                                                <label for="inputPassword4" class="form-label col-sm-4 mt-2">ปี</label>
+                                            </div>
                                         </div>
                                         <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">ศาสนา</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['RELIGION'] ?>" name="RELIGION">
                                         </div>
                                         <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">โรคประจำตัว</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="" name="CD">
                                         </div>
                                         <div class="col-md-3 mb-3">
                                             <label for="inputPassword4" class="form-label">บ้านเลขที่</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['ADDRESS'] ?>" name="Ban">
                                         </div>
                                         <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">ถนน</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" name="Road">
                                         </div>
                                         <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">ตำบล</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" name="District">
                                         </div>
                                         <div class="col-md-3">
                                             <label for="inputPassword4" class="form-label">อำเภอ</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" name="SD">
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="inputPassword4" class="form-label">จังหวัด</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['PROVINCE'] ?>" name="PROVINCE">
                                         </div>
                                         <div class="col-md-4">
                                             <label for="inputPassword4" class="form-label">รหัสไปรษณีย์</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['ZC'] ?>" name="ZC">
                                         </div>
                                         <div class="col-md-4">
                                             <label for="inputPassword4" class="form-label">ผู้เกี่ยวข้อง</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['CP'] ?>" name="CP">
                                         </div>
                                         <div class="col-md-4 mb-3">
                                             <label for="inputPassword4" class="form-label">เบอร์โทรผู้เกี่ยวข้อง</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['CNPN'] ?>" name="CNPN">
                                         </div>
                                     </div>
                                 </div>
@@ -176,43 +187,36 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="inputEmail4" class="form-label">ชื่อสถานศึกษา</label>
-                                            <input type="text" class="form-control" id="inputEmail4">
+                                            <input type="text" class="form-control" id="inputEmail4" value="<?= $row['EDUCNAME'] ?>" name="EDUCNAME">
                                         </div>
                                         <div class="col-md-6 ">
                                             <label for="inputPassword4" class="form-label">ระดับการศึกษา</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['EDUCEL'] ?>" name="EDUCEL">
                                         </div>
                                         <div class="col-md-6 mb-3 ">
                                             <label for="inputPassword4" class="form-label">คณะ</label>
-                                            <input type="text" class="form-control " id="inputPassword4">
+                                            <input type="text" class="form-control " id="inputPassword4" value="" name="ST_EF">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="inputPassword4" class="form-label">สาขาวิชา</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['EDUC_MAJOR'] ?? '' ?>" name="EDUC_MAJOR">
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label for="inputPassword4" class="form-label">วิชาเอก</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['EDUCSM'] ?? '' ?>" name="EDUCSM">
                                         </div>
-                                        <div class="col-md-6 ">
-                                            <label for="inputPassword4" class="form-label">สาขาวิชา</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
-                                        </div>
-                                        <div class="col-md-6 mb-3">
-                                            <label for="inputPassword4" class="form-label">วิชาเอก</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
-                                        </div>
+
                                         <div class="col-md-6 ">
                                             <label for="inputPassword4" class="form-label">เกรดเฉลี่ยสะสม</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['EDUCGPA'] ?>" name="EDUCGPA">
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label for="inputPassword4" class="form-label">อาจารย์ที่ปรึกษา</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['EDUCA'] ?>" name="EDUCA">
                                         </div>
                                         <div class="col-md-6">
                                             <label for="inputPassword4" class="form-label">เบอร์โทรอาจารย์ที่ปรึกษา</label>
-                                            <input type="text" class="form-control" id="inputPassword4">
+                                            <input type="text" class="form-control" id="inputPassword4" value="<?= $row['EDUCPN'] ?>" name="EDUCPN">
                                         </div>
 
                                     </div>
@@ -343,9 +347,9 @@
                             <div class="d-flex mb-3">
                                 <div class="me-auto p-2">
                                 </div>
-                                <div class="p-2"><a href=""><button type="button" class="btn btn-warning">
-                                            บันทึก
-                                        </button></a></div>
+                                <div class="p-2"><button type="submit" class="btn btn-warning">
+                                        บันทึก
+                                    </button></div>
                                 <div class="p-2"><a href=""><button type="button" class="btn btn-success">
                                             แก้ไข
                                         </button></a></div>

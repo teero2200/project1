@@ -45,7 +45,7 @@
                     <div class="container  text-center mt-5">
 
 
-                        <form action="/../project1/backend/login.php" method="post">
+                        <form action="../backend/login.php" method="post">
                             <div class="mb-3 ">
                                 <label for="formGroupExampleInput" class="form-label me-3">รหัสประจำตัว</label>
                                 <input type="text" class="col-md-2 " name="ID_IDEN" id="formGroupExampleInput" maxlength="13" placeholder="163xxxxxx">

@@ -29,6 +29,7 @@ if (!$objResult) {
 } else {
 
     $_SESSION["id"] = $objResult["id"];
+    $_SESSION["ID_IDEN"] = $objResult["ID_IDEN"];
     $_SESSION["name"] = $objResult["name"];
     $_SESSION["email"] = $objResult["email"];
     $_SESSION["role"] = $objResult["role"];

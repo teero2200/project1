@@ -44,18 +44,18 @@
                     <div class="text-center">
                         <h3 class="text-dark">เพิ่มข้อมูลหัวข้อข่าวสาร</h3>
                     </div>
-                        <form action="../../../backend/new/insert.php" method="post">
-                            <div class="mb-3">
-                                <label for="exampleName" class="form-label">ชื่อข่าว</label>
-                                <input type="text" class="form-control" name="name" id="exampleName">
-                            </div>
-                            <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">รายละเอียด</label>
-                                <input type="text" class="form-control" name="details" id="exampleInputPassword1">
-                            </div>
+                    <form action="../../../backend/new/insert.php" method="post">
+                        <div class="mb-3">
+                            <label class="form-label">ชื่อข่าว</label>
+                            <input type="text" class="form-control" name="name" require>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">รายละเอียด</label>
+                            <input type="text" class="form-control" name="details" require>
+                        </div>
 
-                            <button type="submit" class="btn btn-primary">ยืนยัน</button>
-                        </form>
+                        <button type="submit" class="btn btn-primary">ยืนยัน</button>
+                    </form>
 
                 </div>
 

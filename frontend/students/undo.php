@@ -19,6 +19,8 @@
 
     <!-- Custom styles for this template-->
     <link href="../assets/css/sb-admin-2.min.css" rel="stylesheet" />
+
+
 </head>
 
 <body id="page-top">
@@ -62,70 +64,16 @@
 
                             </tbody>
                         </table>
-
-                        <select class="col-md-4  form-select mb-4" aria-label="Default select example">
+                        <select class="col-md-4  form-select mb-4" id="search" aria-label="Default select example">
                             <option selected>ปีที่ฝึก</option>
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
+                            <?php
+                            $year_en = date("Y");
+                            $year_th = date("Y") + 543;
+                            for ($i = 0; $i < 5; $i++) { ?>
+                                <option value="<?= $year_en - $i ?>"><?= $year_th - $i ?> </option>
+                            <?php } ?>
                         </select>
-
-
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ลำดับ</th>
-                                    <th scope="col">รหัสนักศึกษา</th>
-                                    <th scope="col">ชื่อนักศึกษา</th>
-                                    <th scope="col">สถานที่ฝึก</th>
-                                    <th scope="col">ปีที่ฝึก</th>
-                                    <th scope="col">ที่อยู่</th>
-                                    <th scope="col">อำเภอ</th>
-                                    <th scope="col">จังหวัด</th>
-                                    <th scope="col">เบอร์โทรติดต่อ</th>
-                                    <th scope="col">ตำแหน่งงาน</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">1</th>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">2</th>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">3</th>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                    <td>xxxxx</td>
-                                </tr>
-
-                            </tbody>
-                        </table>
+                        <div id="results"></div>
                     </div>
                 </div>
 
@@ -164,6 +112,29 @@
     <!-- Page level custom scripts -->
     <script src="../assets/js/demo/chart-area-demo.js"></script>
     <script src="../assets/js/demo/chart-pie-demo.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // เมื่อมีการพิมพ์ในช่องค้นหา
+            $("#search").on("input", function() {
+                var query = $(this).val();
+                console.log(query)
+                // ส่งข้อมูลค้นหาไปยังเซิร์ฟเวอร์
+                $.ajax({
+                    url: "../../backend/db_student/select_year.php", // ไฟล์ PHP ที่จะจัดการค้นหา
+                    method: "POST",
+                    data: {
+                        year: query
+                    },
+                    success: function(response) {
+                        $("#results").html(response);
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -1,9 +1,11 @@
 <?php
+session_start();
 include_once('../../database/connect.php');
-// `FMLN_NAME`, `FMLN_ADDRESS`, 
-// `FMLN_MOO`, `FMLN_ROAD`, `FMLN_SD`, `FMLN_PROVINCE`, 
-// `FMLN_ZC`, `FMLN_NUMBER`, `FMLN_FAX`, `FMLN_PN`, `FMLN_EMAIL`
-// กรอกข้อมูล
+
+
+// เก็บข้อมูล
+$id = $_SESSION["id"];
+$role =  $_SESSION["role"];
 $FMLN_NAME = $_POST['FMLN_NAME'];
 $FMLN_ADDRESS = $_POST['FMLN_ADDRESS'];
 $FMLN_MOO = $_POST['FMLN_MOO'] ?? '';
@@ -21,14 +23,24 @@ $FMLN_EMAIL = $_POST['FMLN_EMAIL'];
 $objCon->begin_transaction();
 
 try {
+
     // เพิ่มข้อมูลในตารางแรก
     $sql1 = "INSERT INTO `fm_location`( `FMLN_NAME`, `FMLN_ADDRESS`, `FMLN_MOO`, `FMLN_ROAD`, `FMLN_SD`, `FMLN_PROVINCE`, `FMLN_ZC`, `FMLN_NUMBER`, `FMLN_FAX`, `FMLN_PN`, `FMLN_EMAIL`) 
     VALUES('$FMLN_NAME','$FMLN_ADDRESS','$FMLN_MOO','$FMLN_ROAD','$FMLN_SD','$FMLN_PROVINCE','$FMLN_ZC','$FMLN_NUMBER','$FMLN_FAX','$FMLN_PN','$FMLN_EMAIL')";
     $objCon->query($sql1);
 
-    // เพิ่มข้อมูลในตารางที่สอง
-    $sql2 = "INSERT INTO `fm01`(`FM01_ID`, `TC_ID`, `ST_ID`, `FMLN_ID`) VALUES ('[value-1]','[value-2]','[value-3]','[value-4]')";
+    // รับ ID ที่เพิ่งถูกเพิ่มจาก table1
+    $last_id = $objCon->insert_id;
+
+    // เพิ่มข้อมูลในตารางสอง
+    $sql2 = "INSERT INTO `fm_location_log`( `FMLN_NAME`, `FMLN_ADDRESS`, `FMLN_MOO`, `FMLN_ROAD`, `FMLN_SD`, `FMLN_PROVINCE`, `FMLN_ZC`, `FMLN_NUMBER`, `FMLN_FAX`, `FMLN_PN`, `FMLN_EMAIL`) 
+    VALUES('$FMLN_NAME','$FMLN_ADDRESS','$FMLN_MOO','$FMLN_ROAD','$FMLN_SD','$FMLN_PROVINCE','$FMLN_ZC','$FMLN_NUMBER','$FMLN_FAX','$FMLN_PN','$FMLN_EMAIL')";
     $objCon->query($sql2);
+
+    // เพิ่มข้อมูลในตารางที่สาม
+    $sql3 = "INSERT INTO `fm1`(`id_user`, `role`, `FMLN_ID`,  `FM01_STATUS`) 
+    VALUES ('$id','$role','$last_id','รอดำเนินการ');";
+    $objCon->query($sql3);
 
 
     // หากไม่มีข้อผิดพลาดให้ยืนยันการทำ Transaction
