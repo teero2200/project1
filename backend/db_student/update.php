@@ -90,7 +90,7 @@ try {
 
     // หากไม่มีข้อผิดพลาดให้ยืนยันการทำ Transaction
     $objCon->commit();
-    echo "Data updated successfully into all tables!";
+   header("location:../../students/creat.php");
 } catch (Exception $e) {
     // หากเกิดข้อผิดพลาด ให้ยกเลิก Transaction
     $objCon->rollback();

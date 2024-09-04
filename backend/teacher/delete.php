@@ -7,7 +7,7 @@ $id = $_GET['id'];
 $sql = "DELETE FROM users WHERE id = $id";
 
 if ($objCon->query($sql) === TRUE) {
-    header("Location: ../../frontend/admins/teachers/index.php");
+    header("Location: ../frontend/admins/teachers/index.php");
 } else {
     echo "Error deleting record: " . $objCon->error;
 }

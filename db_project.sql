@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 26, 2024 at 03:10 PM
+-- Generation Time: Sep 04, 2024 at 04:21 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.1.25
 
@@ -91,38 +91,6 @@ CREATE TABLE `fm_location` (
   `FMLN_EMAIL` varchar(35) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Dumping data for table `fm_location`
---
-
-INSERT INTO `fm_location` (`FMLN_ID`, `FMLN_NAME`, `FMLN_ADDRESS`, `FMLN_MOO`, `FMLN_ROAD`, `FMLN_SD`, `FMLN_PROVINCE`, `FMLN_ZC`, `FMLN_NUMBER`, `FMLN_FAX`, `FMLN_PN`, `FMLN_EMAIL`) VALUES
-(1, 'ewqeqe', 'qeeqwe', '', '', '', '', '', 'wqeqe', 'qweqe', '', 'wewqe@sfsfsdf.com'),
-(2, 'asdda', 'asdad', '', '', '', '', '', '0635965816', '1213213', '', '123213@fds.com'),
-(3, 'sadds', 'sadd', '', '', '', '', '', 'asdsad', 'adasd', '', 'asdad@sfdsf.com'),
-(4, 'sadds', 'sadd', '', '', '', '', '', 'asdsad', 'adasd', '', 'asdad@sfdsf.com'),
-(5, 'sadds', 'sadd', '', '', '', '', '', 'asdsad', 'adasd', '', 'asdad@sfdsf.com'),
-(6, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
-(7, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
-(8, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
-(9, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
-(10, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
-(24, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
-(25, 'adsa', 'sadadsad', '', '', '', '', '', 'asdsa', 'adad', '', 'asds@sdf.com'),
-(27, 'หีไม่เคยเหม็น', 'อาจารย์ควย', '', '', '', '', '', '0635965816', 'adad', '', 'asds@sdf.com'),
-(28, 'หีไม่เคยเหม็น', 'อาจารย์ควย', '', '', '', '', '', '0635965816', 'adad', '', 'asds@sdf.com'),
-(29, 'หีไม่เคยเหม็น', 'อาจารย์ควย', '', '', '', '', '', '0635965816', 'adad', '', 'asds@sdf.com'),
-(30, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(31, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(32, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(33, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(34, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(42, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(43, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(46, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(47, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(48, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com'),
-(49, 'saadada', 'dadsada', '', '', '', '', '', 'dadsad', 'dsadsad', '', 'asdsadsada@sdfsf.com');
-
 -- --------------------------------------------------------
 
 --
@@ -144,26 +112,6 @@ CREATE TABLE `fm_location_log` (
   `FMLN_EMAIL` varchar(35) NOT NULL,
   `update` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Dumping data for table `fm_location_log`
---
-
-INSERT INTO `fm_location_log` (`FMLN_ID`, `FMLN_NAME`, `FMLN_ADDRESS`, `FMLN_MOO`, `FMLN_ROAD`, `FMLN_SD`, `FMLN_PROVINCE`, `FMLN_ZC`, `FMLN_NUMBER`, `FMLN_FAX`, `FMLN_PN`, `FMLN_EMAIL`, `update`) VALUES
-(1, 'หีไม่เคยเหม็น', 'อาจารย์ควย', '', '', '', '', '', '0635965816', 'adad', '', 'asds@sdf.com', '2024-08-22 10:06:07'),
-(2, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:07'),
-(3, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:07'),
-(4, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:16'),
-(5, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:16'),
-(6, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:23:47'),
-(14, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:25:41'),
-(15, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:25:41'),
-(16, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:32:08'),
-(17, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:32:08'),
-(18, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:33:06'),
-(19, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:33:06'),
-(20, 'asdad', 'sadsad', '', '', '', '', '', 'asdad', 'asddaa', '', 'asdada@sfdsf.com', '2024-08-22 10:36:55'),
-(21, 'saadada', 'dadsada', '', '', '', '', '', 'dadsad', 'dsadsad', '', 'asdsadsada@sdfsf.com', '2024-08-25 15:24:06');
 
 -- --------------------------------------------------------
 
@@ -328,10 +276,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `ID_IDEN`, `name`, `ID_CN`, `SG`, `EDUC_MAJOR`, `PN`, `email`, `NICKNAME`, `DATE`, `AGE`, `RELIGION`, `CD`, `ADDRESS`, `SD`, `PROVINCE`, `ZC`, `CP`, `CNPN`, `EDUCNAME`, `EDUCEL`, `EDUCSM`, `EDUCGPA`, `EDUCA`, `EDUCPN`, `password`, `id_major`, `number`, `role`, `IMAGE`) VALUES
 (1, '1631010541137', 'tee', '1631010541137', NULL, '', NULL, 'teebin2019@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'admin', NULL),
 (3, '1631010541120', 'ธีรภัทร ศรีทองกุล', '1631010531138', NULL, '', NULL, 'arue1@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, '', '', '', '', '', '', '', '', '', '', '', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '', 'student', NULL),
-(5, '1', 'Tawan', '1', NULL, NULL, NULL, 'Tawan@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'admin', NULL),
-(7, '3', '1724662058.', '1849901481431', '1', 'วิศวกรรมคอมพิวเตอร์', '', 'teebin2019@gmail.com', 'ธีร์', '2001-03-06', 23, 'พุทธ', '', 'Address', '', 'สุราษฎร์ธานี', '84220', '0862717092', '', 'ราชฎัฐสุราษฎร์ธานี', 'ปี 1', 'คอม', '4.00', 'อาจารย์ณัฐ', '04577555', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'student', 'upload/1724662058.'),
-(8, '12345678901', 'ew', '12345678901', NULL, NULL, NULL, 'qwe@sfdsfs.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '416f8f6e105370e7b9d0fd983141f00b613477f8', 1, '92131313', 'admin', NULL),
-(15, '13456789', 'สวัสดีครับ ชาวโลก', NULL, NULL, NULL, NULL, 'Tawan1@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7c222fb2927d828af22f592134e8932480637c0d', 1, '0635965816', 'teacher', NULL);
+(5, '1', 'Tawan', '1', NULL, NULL, NULL, 'Tawan@gmail.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7b52009b64fd0a2a49e6d8a939753077792b0554', NULL, '', 'admin', NULL),
+(7, '3', '1725082511.', '1849901481431', '1', 'วิศวกรรมคอมพิวเตอร์', 'ddd', 'teebin2019@gmail.com', 'ธีร์', '2001-03-06', 23, 'พุทธ', 'd', 'Addressdd', 'dd', 'สุราษฎร์ธานี', '84220', '0862717092', '', 'ราชฎัฐสุราษฎร์ธานี', 'ปี 1', 'คอม', '4.00', 'อาจารย์ณัฐ', '04577555', '7c222fb2927d828af22f592134e8932480637c0d', NULL, '', 'student', 'upload/1725082511.'),
+(8, '12345678901', 'ew', '12345678901', NULL, NULL, NULL, 'qwe@sfdsfs.com', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '416f8f6e105370e7b9d0fd983141f00b613477f8', 1, '92131313', 'admin', NULL);
 
 -- --------------------------------------------------------
 
